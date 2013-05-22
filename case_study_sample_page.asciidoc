@@ -9,7 +9,7 @@ Each case study can be broken into major chunks called *sections*.  For example,
 * Threshold the image
 * Find contours
 
-Each step should be relatively self-contained (although it can certainly mention previous steps), brief, and concrete.  The format is modeled on Zed Shaw's awesome http://learncodethehardway.org/[LCodeTHW]:
+Each step should be relatively self-contained (although it can certainly mention previous steps), brief, and concrete.  Zed Shaw's awesome http://learncodethehardway.org/[LCodeTHW] format is a great potential model:
 
 * http://learnpythonthehardway.org/book/ex4.html
 * http://cli.learncodethehardway.org/book/ex19.html
