@@ -1,7 +1,6 @@
 == Sample Case Study Page
 
-One of the first things that's important: a case study is not necessarily the same as a tutorial.  We don't want people to slavishly follow what we've got set up.  Rather, we want to give them the background info and links to the main reading.  So, a lot of the goal of the case study is to deepen the learners understanding and problem solving abilities. 
-
+One of the first things that's important: a case study is not necessarily the same as a tutorial.  We don't want people to slavishly follow what we've got set up.  Rather, we want to give them the background info, links to the main reading, and help guide them through a thinking process.  So, a lot of the goal of the case study is to deepen the learner's understanding and problem solving abilities. 
 
 A case study can be broken into major chunks called *sections*.  For example, in this case study, we have two major sections: _frame alignment_ and _frame extraction_.  Each section can be broken into *steps*.  For example, the steps in the "frame alignment section" include: 
 
