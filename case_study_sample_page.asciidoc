@@ -17,12 +17,18 @@ Each step should be relatively self-contained (although it can certainly mention
 
 In my mockup, the key elements are:
 
-* The nav bar.  You'd be able to easily step through each section from the nav bar at the top
-* An intro section.  This would be a brief writeup on the step and what you do
-* "What you'll be doing". This is an image (os series of images), animated gif, or short video ( \< 2 minutes ) on what you do in this step.  The goal is not to necessarily to tell how, but to show what
-* Background information.  This is reference material on background concepts.  Most of this will links back to the main book.
-* Key API calls.  These are sort of like hints -- basically, tell the reader what they'll be using and let them expore.  These links can go to the main text, the processing API site, or even the java site with the full API for opencv.
-* Sample solution.  This is a code that "solves" this step.  Whenever possible, we should tie this to a specific commit for that step.  That way, you can have the "final project" in one file, but each step would have it's own version of the code at that point.  We need to do some real experimentation here to figure out what's possible, but for now, just assume you could:
+The nav bar::
+   You'd be able to easily step through each section from the nav bar at the top.
+The intro section::
+   This would be a brief writeup on the step and what you do
+"What you'll be doing"::
+   This is an image (os series of images), animated gif, or short video ( \< 2 minutes ) on what you do in this step.  The goal is not to necessarily to tell how, but to show you what you'll be trying to do.
+Background information::
+  This is reference material on background concepts.  Most of this will links back to the main book.
+Key API calls::
+   These are sort of like hints -- basically, tell the reader what they'll be using and let them expore.  These links can go to the main text, the processing API site, or even the java site with the full API for opencv.
+Sample solution::
+   This is a code that "solves" this step.  Whenever possible, we should tie this to a specific commit for that step.  That way, you can have the "final project" in one file, but each step would have it's own version of the code at that point.  We need to do some real experimentation here to figure out what's possible, but for now, just assume you could:
 ** open and close the section; by default, it would be closed.
 ** see the code in the Ace editor
 ** Make a gist of the code so you could play with it
