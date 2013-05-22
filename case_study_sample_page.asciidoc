@@ -29,10 +29,10 @@ Key API calls::
    These are sort of like hints -- basically, tell the reader what they'll be using and let them expore.  These links can go to the main text, the processing API site, or even the java site with the full API for opencv.
 Sample solution::
    This is a code that "solves" this step.  Whenever possible, we should tie this to a specific commit for that step.  That way, you can have the "final project" in one file, but each step would have it's own version of the code at that point.  We need to do some real experimentation here to figure out what's possible, but for now, just assume you could:
-** open and close the section; by default, it would be closed.
-** see the code in the Ace editor
-** Make a gist of the code so you could play with it
-** More exiting stuff we haven't thought about...
+* open and close the section; by default, it would be closed.
+* see the code in the Ace editor
+* Make a gist of the code so you could play with it
+* More exiting stuff we haven't thought about...
 
 Here's a sample mockup of a step:
 
