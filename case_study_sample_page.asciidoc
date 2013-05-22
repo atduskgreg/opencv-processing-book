@@ -30,7 +30,7 @@ In my mockup, the key elements are:
 
 Here's a sample mockup of a step:
 
-image::wireframes/step_wireframe.png[]
+image::images/step_wireframe.png[]
 
 
 
