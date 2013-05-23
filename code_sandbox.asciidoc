@@ -1,0 +1,20 @@
+== Code Sandbox
+
+The idea here is that we'd take the "editor" part of Atlas and make it part of Chimera.  The idea is to make something similar to http://runnable.com/[runnable.com].  Here's a mockup:
+
+image::images/code_sandbox.png[]
+
+The main parts are:
+
+Login to GitHub::
+   When you buy a product in Chimera, it forks a copy to your account.  From then, you can edit the code as you follow along with the steps.  The editor would be something you could call up at any point in the tutorial.
+Push to Heroku::
+   I'm not sure if this is even possible, but the idea is that the user provides some heroku credentials that would allow a worker-like process to push the repo up to their account on Heroku.  We would capture STDOUT from the worked and send it into the console window so that you could see what was going on.
+File Selector::
+   This is like what's in Atlas now -- you'd be able to select files and navigate around.
+Editor::
+   Basically, this is the Ace editor as we have it now.  There would be a simple set of menus / buttons to allow you to save, search and replace, or view the file at different points in it's commit history.
+Console::
+   This window displays the output from the "Push to Heroku" process.  Again, it's basically STDOUT on a worker wired up via the Pusher API.
+   
+
