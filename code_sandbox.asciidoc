@@ -1,13 +1,13 @@
 == Code Sandbox
 
-The idea here is that we'd take the "editor" part of Atlas and make it part of Chimera.  The idea is to make something similar to http://runnable.com/[runnable.com].  Here's a mockup:
+The idea here is that when you buy a product in Chimera, it forks a copy of the case study to your account.  From there, you can edit the code in a http://runnable.com/[runnable.com] editor that allows you to push code to Heroku.  So, as you follow along the steps, you could try each step and see what was happening.  The editor would be something you could call up at any point in the tutorial.
 
 image::images/code_sandbox.png[]
 
 The main parts are:
 
 Login to GitHub::
-   When you buy a product in Chimera, it forks a copy to your account.  From then, you can edit the code as you follow along with the steps.  The editor would be something you could call up at any point in the tutorial.
+   This signs you into github and connects you to the correct repo.
 Push to Heroku::
    I'm not sure if this is even possible, but the idea is that the user provides some heroku credentials that would allow a worker-like process to push the repo up to their account on Heroku.  We would capture STDOUT from the worked and send it into the console window so that you could see what was going on.
 File Selector::
