@@ -1,6 +1,6 @@
 == Code Sandbox
 
-The idea here is that when you buy a product in Chimera, it forks a copy of the case study to your account.  From there, you can edit the code in an environment similar to http://runnable.com/[runnable.com].  Once you've completed the steps, you can click a button to push the repo to your own Heroku account.  So, as you follow along the steps, you could try each step and see what was happening.  The editor would be something you could call up at any point in the tutorial.
+The idea here is that when you buy a product in Chimera, it forks a copy of the case study to your account.  From there, you can edit the code in an environment similar to http://runnable.com/[runnable.com].  Once you've completed the steps, you can click a button to push the repo to your own Heroku account.  So, you could try each step as you followed along in the tutorial.  
 
 image::images/code_sandbox.png[]
 
@@ -13,7 +13,7 @@ Push to Heroku::
 File Selector::
    This is like what's in Atlas now -- you'd be able to select files and navigate around.
 Editor::
-   Basically, this is the Ace editor as we have it now.  There would be a simple set of menus / buttons to allow you to save, search and replace, or view the file at different points in it's commit history.
+   Basically, this is the Ace editor as we have it now.  There would be a simple set of menus / buttons to allow you to save, create new files, search and replace, or view the file at different points in its commit history.
 Console::
    This window displays the output from the "Push to Heroku" process.  Again, it's basically STDOUT on a worker wired up via the Pusher API.
    
