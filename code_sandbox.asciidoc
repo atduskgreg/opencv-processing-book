@@ -1,6 +1,6 @@
 == Code Sandbox
 
-The idea here is that when you buy a product in Chimera, it forks a copy of the case study to your account.  From there, you can edit the code in a http://runnable.com/[runnable.com] editor that allows you to push code to Heroku.  So, as you follow along the steps, you could try each step and see what was happening.  The editor would be something you could call up at any point in the tutorial.
+The idea here is that when you buy a product in Chimera, it forks a copy of the case study to your account.  From there, you can edit the code in an environment similar to http://runnable.com/[runnable.com].  Once you've completed the steps, you can click a button to push the repo to your own Heroku account.  So, as you follow along the steps, you could try each step and see what was happening.  The editor would be something you could call up at any point in the tutorial.
 
 image::images/code_sandbox.png[]
 
