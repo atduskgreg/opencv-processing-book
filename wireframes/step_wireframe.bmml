@@ -64,7 +64,7 @@
         <text/>
       </controlProperties>
     </control>
-    <control controlID="25" controlTypeID="com.balsamiq.mockups::TextInput" x="256" y="1315" w="465" h="-1" measuredW="79" measuredH="26" zOrder="12" locked="false" isInGroup="-1">
+    <control controlID="25" controlTypeID="com.balsamiq.mockups::TextInput" x="252" y="1315" w="465" h="-1" measuredW="79" measuredH="26" zOrder="12" locked="false" isInGroup="-1">
       <controlProperties>
         <borderColor>13421772</borderColor>
         <color>13421772</color>
