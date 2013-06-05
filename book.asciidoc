@@ -1,5 +1,3 @@
 = Getting Started with Computer Vision
 
-include::case_study_kinograph.asciidoc[]
-
 include::case_study_sample_page.asciidoc[]
