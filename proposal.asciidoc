@@ -1,8 +1,10 @@
 == Getting Started with Computer Vision Proposal
 
-by Greg Borenstein 3/1/2013
+by Greg Borenstein 
+3/1/2013
 
 === Introduction
+
 The field of computer vision has a deceptively simple mission: build up information from images to make conclusions about the world. In a time when we’re more and more surrounded by increasingly high resolution cameras hooked up to powerful computers (cf. the More Pixels Law) and huge online databases of images (the world’s largest photo libraries), computer vision is taking its place as one of the foundational skills necessary to invent the next generation of technology: from user interfaces, to mobile applications, to search engines, to social networks.
 
 Until now, computer vision has mainly been the domain of academic researchers, computer science wizards, and a few adventurous interactive artists and designers. However the tools of the field have never been easier to use. Specifically, OpenCV, a huge open source project implementing a tremendous range of computer vision algorithms and techniques, has reached an advanced level of maturity where it is widely available (including on both iOS and Android) and integrated into creative coding toolkits that are accessible to beginners.
@@ -18,13 +20,14 @@ To achieve these goals, this book is organized around the six stages that consti
 * Train
 * Combine
 
-The plan for this book is to integrate these techniques into fun and motivating projects such as:
+The plan for this book is to integrate these techniques into fun and motivating case studies such as:
 
 
 * A Caroonifier
 * Object tracking for a simple game Augmented Reality
 * Identifying toys
 * Recognizing faces
+* Making a kinograph
 
 [NOTE]
 ====
@@ -38,6 +41,10 @@ A brief note about some practical issues related to timing of the book’s relea
 Given the goals of producing rich online multi-media content for this project, I believe that the individual pieces should be released as they are completed so we can get feedback from the community and possibly even participation and collaboration from other core Processing members who teach with OpenCV.
 
 The release of Processing 2.0 (probably this summer) will be the target release date for this new OpenCV library and would also be a good target for having at least the first components of this project publicly available to draft on the attention from those announcements.
+
+=== Key Topics will Include
+
+*Need to add the awesome gist from Golan Levin*
 
 === Chapter Outline
 
@@ -82,7 +89,7 @@ ARToolkit::
 
 Sometimes, you don’t want to or can’t use an AR marker, either to avoid the appearance of the ugly markers or because you want to track some pre-existing markerless object. OpenCV enables markerless object tracking using “image features”, unique parts of objects that can be reliably found in multiple images even as the object moves and rotates. We’ll see how to track such an object in an AR application.
 
-Markerless
+Markerless::
    * Find image features (using corner detection) in a source image FLANN search for similar features
    * outlier filtering with RANSAC
    * pose estimation
