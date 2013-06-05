@@ -15,24 +15,14 @@ Each step should be relatively self-contained (although it can certainly mention
 * http://cli.learncodethehardway.org/book/ex19.html
 * http://regex.learncodethehardway.org/book/ex7.html
 
-In my mockup, the key elements are:
+The key elements in each step includ:
 
-The nav bar::
-   You'd be able to easily step through each section from the nav bar at the top.
-The intro section::
-   This would be a brief writeup on the step and what you do
-"What you'll be doing"::
-   This is an image (os series of images), animated gif, or short video ( \< 2 minutes ) on what you do in this step.  The goal is not to necessarily to tell how, but to show you what you'll be trying to do.
-Background information::
-  This is reference material on background concepts.  Most of this will links back to the main book.
-Key API calls::
-   These are sort of like hints -- basically, tell the reader what they'll be using and let them expore.  These links can go to the main text, the processing API site, or even the java site with the full API for opencv.
-Sample solution::
-   This is a code that "solves" this step.  Whenever possible, we should tie this to a specific commit for that step.  That way, you can have the "final project" in one file, but each step would have it's own version of the code at that point.  We need to do some real experimentation here to figure out what's possible, but for now, just assume you could:
-* open and close the section; by default, it would be closed.
-* see the code in the Ace editor
-* Make a gist of the code so you could play with it
-* More exiting stuff we haven't thought about...
+Introduction / Name of the step::
+   This would be a brief writeup on the step and what you do.  It should also include an image (os series of images), animated gif, or short video ( \< 2 minutes ) on what you do in this step.  The goal is not to necessarily to tell how, but to show you what you'll be trying to do.
+Before you start::
+  This is reference material on background concepts.  Rather than present a boring list of topics, review material is presented as a quiz.  The reader can take the quiz and then use this as an interactive way to brush up on the main things he or she needs to understand to complete the task.  Something like Sander's http://examples.oreilly.com/0636920022473/ebook_pop_quiz/pop_quiz.html[quiz for epub for publishers], but with a bit more jQuery pizazz, would be a good start.  This section should also provide links to additional information back to the main text, the processing API site, or even the java site with the full API for opencv.  Basically, *anything* (whether in the book or published by O'Reilly not!) that the will help the reader understand what they need to know to get the job done without actually telling him or her exactly what to do.  
+Suggested solution::
+   This is a code that "solves" this step.  Whenever possible, we should tie this to a specific commit for that step.  That way, you can have the "final project" in one file, but each step would have it's own version of the code at that point.  We'll use a tool like http://jashkenas.github.io/docco/[Docco] to create a much more "narrative" walkthrough of the text.  In addition. each code sample will have a toolbar whose functions are still TBD.  We need to do some real experimentation here to figure out what's possible, but for now, just assume that there is some sort of command bar that will do things like allow you to copy the code or maybe save it as a gist.
 
 Here's a sample mockup of a step:
 
