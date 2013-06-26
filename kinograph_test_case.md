@@ -39,7 +39,29 @@ Click on two parts of the image that seem promising for detecting the orientatio
 
 _ANSWER: frame separators, sprocket holes, frame edges_
 
-quiz review
+#### Answer
+
+The three parts of the image that best fit our criteria are:
+
+* The horizontal frame separators
+* The frame's vertical edges
+* The sprocket holes
+
+_CLOSE-UP IMAGE OF FRAME SEPARATOR_
+
+As big black horizontal bars, the frame separators are maybe the starkest portion of the image. Their edges make-up straight horizontal lines, so finding them would tell us the orientation of the frame with the scan. And they border the frame itself on top and bottom, giving of half of what we need to find the frame's location. However, the frame separators have a downside too: what happens when the frame goes completely black? Fade outs, credit sequences, and title cards are all common situations in which black areas of the frame would bleed into the frame borders, screwing up our detection.
+
+_CLOSE-UP IMAGE OF FRAME EDGE_
+
+The frame's vertical edges aren't as stark as the separators, but they do contrast nicely with the neighboring translucent area of the film. As straight lines, they also provide solid information about the orientation of the scan. And, as edges of the frame, they give us its left and right bounds. In fact, in combination with the vertical information from the frame separators, we now know enough to find the complete frame position.
+
+_CLOSE-UP IMAGE OF SPROCKET HOLE_
+
+The last part of the image that seems promising is the sprocket holes. They are geometric in shape and certain of them correspond to the top and bottom of the frame. Compared to the frame separators and edges, they're much lower contrast. On the other hand, they're located on a part of the film that won't be affected by changes in the frame. Also, the sprocket holes were designed specifically to  register each frame in the projector so we can rely on them being positioned correctly. One major downside of the sprocket holes is that there are more of them than we need. In order to use them, we'd need a way to distinguish the holes at the top and bottom of the frame from all the others that appear in each scan.
+
+### Filtering the Image
+
+
 image processing to bring out and analyze features
 multiple different approaches
 
