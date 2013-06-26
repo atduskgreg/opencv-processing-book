@@ -23,7 +23,9 @@ image::images/hotspot_quiz_sample.jpg[]
 
 === A data structure to represent the hotspots
 
-The data structure would be a pretty simple, easily editable file / data structure that would define named regions on the image that were meaningful.  This would be something that the author wrote and was fed in as the input data to some sort of widget.  For example:
+The data structure would be a pretty simple, easily editable file / data structure that would define named regions on the image that were meaningful.  Maybe we could just us straight up HTML *map* tag?  But, wherever it is, it needs to be something thats easy for the author to create.  
+
+If it was JSON, it might look like this:
 
 ----
    # A datafile to describe the hotspots, like this
