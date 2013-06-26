@@ -8,10 +8,10 @@ I just had the idea for a quiz for this first test case overview. I want it to b
 ****
 
 There would be 3 main elements in the quiz:
+
 * An original image
 * A data structure that represented the hotspot
 * An HTML answer key that is revealed when the user clicks a spot.  These elements are hidden until the user click the right space on the image.
-
 
 It might be possible to do this with straight SVG or javascript.  But, however we do it, the key elements are:
 
