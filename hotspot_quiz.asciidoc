@@ -50,6 +50,11 @@ You could map these to hotspots on the original image, like this:
 
 image::images/hotspot_quiz_highlighted.png[]
 
+Some important things to note:
+
+* The regions shouldn't be visible while the student is taking the quiz. I want them to think about it from scratch, not multiple choice.
+* We should be able to detect when they click in one of the undefined regions (to tell them that they're wrong) rather than just not registering those clicks.
+
 === The Answer key
 
 The answer key would be html that would be revealed when the reader click the corresponding element in the hotspot.
