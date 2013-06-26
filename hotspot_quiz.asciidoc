@@ -1,0 +1,68 @@
+== Hotspot Quiz
+
+This is a specific type of quiz for this book.  Here's Greg's request:
+
+[QUOTE]
+****
+I just had the idea for a quiz for this first test case overview. I want it to be a quiz where they respond by clicking on parts of an image. In kinograph_test_case.md see the Quiz sub-heading beneath How to Think about the Problem. I'm picturing the film scan included above with a few areas invisibly selected as clickable (both right and wrong answers). I think this kind of image quiz could come in handy a bunch in this book.
+****
+
+There would be 3 main elements in the quiz:
+* An original image
+* A data structure that represented the hotspot
+* An HTML answer key that is revealed when the user clicks a spot.  These elements are hidden until the user click the right space on the image.
+
+
+It might be possible to do this with straight SVG or javascript.  But, however we do it, the key elements are:
+
+=== The Image
+
+Here's an example.  The question is for the reader to identify the regions that she might use as consistent markers when designing an algorithm.
+
+image::images/hotspot_quiz_sample.jpg[]
+
+=== A data structure to represent the hotspots
+
+The data structure would be a pretty simple, easily editable file / data structure that would define named regions on the image that were meaningful.  This would be something that the author wrote and was fed in as the input data to some sort of widget.  For example:
+
+----
+   # A datafile to describe the hotspots, like this
+   #    [
+   #       ["id1", x1, y1, w1, w1],
+   #       ["id2", x2, y2, w2, w2],  
+   #       ["id3", x3, y3, w3, w3],   
+   #       ...
+   #    ]
+   [
+      ["sprockets", 10,10,10,100],
+      ["sprockets", 100,10,10,100],
+      ["horizontal-separator", 25,50,100,10],
+      ["horizontal-separator", 25,80, 100,10],
+      ["vertical-separator", 15,10,5,100],
+      ["vertical-separator", 95,10,5,100],
+      ...
+   ]
+----
+
+You could map these to hotspots on the original image, like this:
+
+image::images/hotspot_quiz_highlighted.png[]
+
+=== The Answer key
+
+The answer key would be html that would be revealed when the reader click the corresponding element in the hotspot.
+
+----
+
+<div class="hotspot" id="sprockets">
+   Correct!  The sprocket holes are a natural feature to help identify the boundaries of the image.  The main feature is that they're little holes.  
+</div> 
+
+<div class="hotspot" id="horizontal-separator">
+   Correct!  The horizontal separators separate each frame.
+</div>
+
+<div class="hotspot" id="vertical-separator">
+   Correct!  The vertical separators define the vertical portion of the frame.
+</div>
+----
