@@ -1,6 +1,7 @@
 ## Getting Started with Computer Vision Test Case 1: Film Scanner Frame Extractor
 
 ### Kinograph: DIY Film Scanner
+
 [Kinograph](http://mepler.com/Kinograph) is an open source DIY film scanner currently under development by Matt Epler, an archivist and hacker. Film scanners digitize analogue movies by photographing each frame of film one at a time. Existing models cost upwards of $100,000. Much of the cost arises from the need for precision hardware to place each frame of film in exactly the same location every time.
 
 Using computer vision, we can reduce the need for this precision. Instead of having to get each film frame into exactly the same spot, we can write a program that finds each frame within an image and extracts it.
@@ -11,7 +12,7 @@ In this test case, we'll approach the problem of detecting and extracting frames
 
 ### The Problem: Rotation and Overscan
 
-<a href="http://www.flickr.com/photos/unavoidablegrain/9142159361/" title="Kinograph source image by atduskgreg, on Flickr"><img src="http://farm3.staticflickr.com/2887/9142159361_78755f06e4.jpg" width="333" height="500" alt="Kinograph source image"></a>
+<a href="http://www.flickr.com/photos/unavoidablegrain/9142159361/" title="Kinograph source image by atduskgreg, on Flickr"><img src="http://farm3.staticflickr.com/2887/9142159361_78755f06e4.jpg" width="333" height="500" alt="Kinograph source image"></img></a>
 
 Raw Kinograph scans (as seen above) present two main challenges for frame extraction: rotation and overscan.
 
