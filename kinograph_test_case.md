@@ -1,6 +1,6 @@
 ## Getting Started with Computer Vision Test Case 1: Film Scanner Frame Extractor
 
-### Problem
+### Kinograph: DIY Film Scanner
 [Kinograph](http://mepler.com/Kinograph) is an open source DIY film scanner currently under development by Matt Epler, an archivist and hacker. Film scanners digitize analogue movies by photographing each frame of film one at a time. Existing models cost upwards of $100,000. Much of the cost arises from the need for precision hardware to place each frame of film in exactly the same location every time.
 
 Using computer vision, we can reduce the need for this precision. Instead of having to get each film frame into exactly the same spot, we can write a program that finds each frame within an image and extracts it.
@@ -9,17 +9,53 @@ Kinograph's software uses exactly these techniques. The result is that Kinograph
 
 In this test case, we'll approach the problem of detecting and extracting frames from images of a film captured with Kinograph. We'll see how OpenCV's image filtering, edge detection, contour detection, and polygon approximation functions can be used to align and extract individual frames from the scanned film.
 
-### Approach Summary
+### The Problem: Rotation and Overscan
 
-<a href="http://www.flickr.com/photos/unavoidablegrain/8709890513/" title="Screen Shot 2013-05-05 at 11.51.58 AM by atduskgreg, on Flickr"><img src="http://farm9.staticflickr.com/8404/8709890513_bc8a98f9a4.jpg" width="500" height="396" alt="Screen Shot 2013-05-05 at 11.51.58 AM"></a>
+<a href="http://www.flickr.com/photos/unavoidablegrain/9142159361/" title="Kinograph source image by atduskgreg, on Flickr"><img src="http://farm3.staticflickr.com/2887/9142159361_78755f06e4.jpg" width="333" height="500" alt="Kinograph source image"></a>
 
-Kinograph scans (as seen above on the left) present two main challenges for frame extraction: rotation and overshoot.
+Raw Kinograph scans (as seen above) present two main challenges for frame extraction: rotation and overscan.
 
-As the film moves through the machine it does not always stay perfectly parallel to the DLSR that captures the scans. In order to correct the resulting rotation, we'll use contour detection and polygon approximation to find vertical lines in the image. We can then calculate the rotation of these lines away from vertical and rotate the image to correct the problem.
+As the film moves through the machine it does not always stay perfectly parallel to the camera that captures the scans. In order to correct this problem, we'll have to figure out the orientation of the frame of film within each scan.
 
-Each Kinograph scan captures more than just the current frame. As you can see in the image above, half of the previous and next frames are also visible. In order to extract only one frame, we'll use edge detection to find the sprocket hole that corresponds the top of the current frame.
+Each Kinograph scan also captures more than just the current frame. As you can see in the image above, half of the previous and next frames are also visible. This excess area is called "overscan" in the digitization biz. It's necessary for other processes like stitching the audio track together, but it's exactly what we have to eliminate to produce a video file that looks like the original movie. In order to extract each frame, we'll have to find its borders within the larger scan.
 
-Between these two techniques we'll be able to extract exactly the frame we're looking for.
+### How to Think about the Problem
+
+So, how can we go about detecting the rotation and frame boundary of each scanned frame? Let's look critically at our example scan above. What parts of this image might help us extract the information we need?
+
+Well, first of all, we know that we'll be processing multiple frames with different content within each frame. This is a moving picture, after all. So, we need to look for parts of the image that will stay consistent even as the content of the frame changes.
+
+Secondly, we need parts of the image that stick out sharply from their surroundings. Unlike the human vision system, computer vision techniques are highly sensitive to subtle variations in the image. Uneven exposure, image noise, subtle gradations of brightness -- they can all make image features that seem obvious to the eye dissolve into a mixed-up jumble of pixels.
+
+And, finally, we need to pick parts of the image that will actually help us find the orientation and location of the image. That means straight lines and other geometric forms that correspond to the edges of the frame and the direction of the strip of film within the scan.
+
+#### Quiz
+
+Click on two parts of the image that seem promising for detecting the orientation and location of the frame. Remember, you're looking for parts of the image that are:
+
+* Consistent even as the content of the frame changes
+* Stark enough to be resistant to variations in image quality
+* Useful in detecting the orientation and location of the film frame.
+
+_ANSWER: frame separators, sprocket holes, frame edges_
+
+quiz review
+image processing to bring out and analyze features
+multiple different approaches
+
+* Find vertical lines in the image to calculate rotation
+* Find the top and bottom of the film frames
+* Find the left and right edges of the frame
+
+* histogram equalization
+* Thresholding
+* region of interest
+* edge detection
+* dilation and erosion
+* contour detection
+* contour processing (polygon approximation)
+
+
 
 ### Outline
 
