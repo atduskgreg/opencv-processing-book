@@ -32,6 +32,13 @@ multiple different approaches
 
 <img src="http://gregborenstein.com/assets/opencv/region_of_interest.gif" width="400px" />
 
+* region of interest + histogram equalization
+
+<img src="http://gregborenstein.com/assets/opencv/roi_histogram.gif" width="400px" />
+
+In addition:
+
+Collapse this visual change into data
 
 * contour finding
 * contour processing (polygon approximation, angle math, etc)
