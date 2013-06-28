@@ -1,44 +1,89 @@
 # Test Case 1: Film Scanner Frame Extractor
 
-## Part 2: Understanding the Problem
+## Part 2: Filtering the Image
 
-### Filtering the Image
+### Why Filter
 
 Now that we know what parts of the image we'd like to work with, how do we go about detecting them?
 
-image processing to bring out and analyze features
-multiple different approaches
+In the end, what we're looking for is geometric data: we want the position, orientation, and scale of the film frame so we can extract it from the scan. This will take the form of angles, x-y coordinates, and scaling factors.
 
-* Thresholding
+There are lots of techniques for extracting data like these from images -- both simple ones that we can implement ourselves (like checking the brightness of particular pixels) and more complex ones provided by OpenCV (eg. contour finding).
+
+But before we're ready to use any of those, we need to prepare our image so that those techniques will actually provide us information about the parts of the image we're curious about. To do that, we'll apply a series of filters to our source image meant to bring out the frame separators, frame edges, and sprocket holes.
+
+### Image Filtering with OpenCV
+
+OpenCV provides a large selection of image filtering functions. In this section, I'll introduce you to the ones that'll be most useful for working with the Kinograph scans. We won't be writing code quite yet -- I just want you to get a feel for each of these filtering functions, how they effect our scans, and how they might be useful.
+
+These image filters are some of the most commonly used tools in the OpenCV toolbelt. The goal is for you to develop an intuition about when to reach for which tool.
+
+#### Thresholding
 
 <img src="http://gregborenstein.com/assets/opencv/threshold.gif" width="400px" />
 
-* edge detection
+Thresholding is maybe the single most common image filter used with OpenCV. It takes a grayscale image and converts it into a "binary" image: one where every pixel is either all-white or all-black based on whether it's lighter or darker than the given threshold.
+
+Many super-useful OpenCV functions require a binary image, like contour finding.
+
+As you can see in the animated GIF above, when we threshold our scan at 50, the subtle grays that make up the area with the sprocket holes on the right of the frame disappear completely into white. And the black bars of the frame separators become even more prominent.
+
+#### Sobel Edge Detection
 
 <img src="http://gregborenstein.com/assets/opencv/find_sobel_edges_horizontal.gif" width="400px" /> <img src="http://gregborenstein.com/assets/opencv/find_sobel_edges_vertical.gif" width="400px" />
 
-* dilation and erosion
+OpenCV includes a number of filters meant to reveal the edges of objects including the Canny filter, the Scharr filter, and the Sobel filter. In our case, the edges we really want to see are all vertical and horizontal: the sides of the film frame and the sprocket holes. Both Scharr and Sobel filters offer directional options; you can ask them specifically to find vertical or horizontal edges.
+
+In the animations above you can see the Sobel edge filter applied to our scan. On the left it's used in horizontal mode and on the right in vertial mode. Notice the differences between the two modes, how each one affects the sides of the film frame and sprocket holes, the vertical stripes in the actor's shirt, and the lines in the soundtrack on the left of the frame.
+
+The horizontal mode will come in handy for finding the sprocket holes, the vertical mode for finding the orientation and the left and right edge of the frame.
+
+### Dilation and Erosion
 
 <img src="http://gregborenstein.com/assets/opencv/dilate.gif" width="400px" /> <img src="http://gregborenstein.com/assets/opencv/erode.gif" width="400px" />
 
+Dilation and erosion are both examples of "morphological" filters, functions that affect the shape of areas of pixels in the image. This can be a hard idea to get your head around on first exposure. How can an image filter change the shape of something in the image?
+
+The key to understanding it is to keep in mind that these filters don't change the shape of the objects pictured in the image; they affect areas in the image where the pixels are similar. Each morphological filter changes the shape of these regions in different ways.
+
+Dilation (shown above on the left) expands the white areas of the image. Examine the edge of the man's face and the stripes on his pajamas. When the filter is on, there's more white in the areas. The edge of his face spreads and smooths and the stripes on the pajamas get fat.
+
+(_NOTE: All of these illustrations are applying erosion and dilation to an image that has already been thresholded both because this makes their effects more visible and because those filters are particularly useful in combination. You can run erosion and dilation on non-binary grayscale images and even on color images._)
+
+Erosion does the opposite. It contracts or thins these white areas. Compare the stripes in the image on the right to those on the left. When the erode filter is on, the stripes get thinner, more black is visible between them. And look at the man's left eye. The small spot of white visible within it disappears and the black shadow expands. 
+
+Now, how is this useful? Dilation and erosion are frequently used together in order to close holes in an image. Take a look at this example of them both being applied to a scan in sequence:
+
 <img src="http://gregborenstein.com/assets/opencv/dilate_erode.gif" width="400px" />
 
-* histogram equalization
+On first glance, this appears to have done a lot less than each filter in isolation. But look closely at those stripes on the pajamas. When the filters are applied, the black holes in them get filled up, like they did under dilate, but the stripes don't spread out. In other areas of the image, a bunch of small isolated bits of black and white disappeared. The image is less noisy and the large areas of black or white are smoother and more continuous.
+
+#### Histogram Equalization
 
 <img src="http://gregborenstein.com/assets/opencv/equalize_histogram.gif" width="400px" />
 
+You've probably seen histograms used to represent information about images in photo editing applications like Photoshop.
 
-* region of interest
+* redistributes the gray values over the full histogram
+* result is like a change in brightness and an increase in contrast
+* makes hard to see things more visible, especially in woefully under or overexposed images
+* disappointingly small change, but wait...
+
+#### Region of Interest
 
 <img src="http://gregborenstein.com/assets/opencv/region_of_interest.gif" width="400px" />
 
-* region of interest + histogram equalization
+* Sometimes we don't want to work on the whole image at once
+* Maybe we only care about a feature if it appears in a certain area
+* Or maybe we're running filtering operations (like histogram equalization) that will have different results depending on their input
+* Region of interest lets us process just a sub-section of our starting image.
+* A bit more like how our eyes work which are constant refocusing and re-adjust to different areas in front of us
+
+#### Region of Interest + Histogram Equalization
 
 <img src="http://gregborenstein.com/assets/opencv/roi_histogram.gif" width="400px" />
 
-In addition:
-
-Collapse this visual change into data
-
-* contour finding
-* contour processing (polygon approximation, angle math, etc)
+* The effects of histogram equalization depend on the range of grays in the image being processed
+* Our original scans have a wide range, therefore the filter had little effect
+* We really want to bring out the edges of the sprocket holes
+* ROI lets us run histogram equalization on just that area which has a much greater effect
