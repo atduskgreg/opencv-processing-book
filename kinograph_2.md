@@ -90,17 +90,16 @@ Now, here you can see real results. The image is much brighter and much higher c
 
 <img src="http://gregborenstein.com/assets/opencv/region_of_interest.gif" width="400px" />
 
-* Sometimes we don't want to work on the whole image at once
-* Maybe we only care about a feature if it appears in a certain area
-* Or maybe we're running filtering operations (like histogram equalization) that will have different results depending on their input
-* Region of interest lets us process just a sub-section of our starting image.
-* A bit more like how our eyes work which are constant refocusing and re-adjust to different areas in front of us
+When filtering images, sometimes we don't want to apply our filters to the entire image. Sometimes we'd rather select a particular area of the image just filter it. Maybe we only care about a feature if it appears in a particular spot. Or maybe we're running filtering operations that will have different results depending on their input (like we just saw above with histogram equalization).
+
+OpenCV lets us select a Region of Interest (ROI) in order to do just that. After we set our ROI, subsequent filters will only apply to that area. In the GIF above you can see our threshold filter applied just to the area around the actors face.
 
 #### Region of Interest + Histogram Equalization
 
 <img src="http://gregborenstein.com/assets/opencv/roi_histogram.gif" width="400px" />
 
-* The effects of histogram equalization depend on the range of grays in the image being processed
-* Our original scans have a wide range, therefore the filter had little effect
-* We really want to bring out the edges of the sprocket holes
-* ROI lets us run histogram equalization on just that area which has a much greater effect
+As we saw, the effects of histogram equalization depend on the range of grays in the image being processed. Our original frame scans have a wide range of gray values and therefore the filter had little effect. But, if we select the right Region of Interest, histogram equalization can really help us bring out the sprocket holes.
+
+In the GIF above, I've selected a small square on the right as an ROI. This area captures the edge of the frame and one of the sprocket holes. Unlike our earlier attempt on the whole image, running histogram equalization on just this area has a dramatic effect. It significantly darkens the edges of the sprocket hole making it much easier to detect.
+
+Using an ROI like this, makes our image filters work a little bit more like our eyes, which are constantly refocusing and re-adjusting to different objects and light conditions in front of us.
