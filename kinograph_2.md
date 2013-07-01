@@ -2,7 +2,7 @@
 
 ## Part 2: Filtering the Image
 
-### Why Filter
+### Why Filter?
 
 Now that we know what parts of the image we'd like to work with, how do we go about detecting them?
 
