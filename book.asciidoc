@@ -1,11 +1,9 @@
 = Getting Started with Computer Vision
 
-include::proposal.asciidoc[]
-
-include::case_study_kinograph.asciidoc[]
-
-include::case_study_sample_page.asciidoc[]
-
 include::kinograph_1.asciidoc[]
 
 include::kinograph_2.asciidoc[]
+
+include::kinograph_3.asciidoc[]
+
+include::kinograph_4.asciidoc[]
