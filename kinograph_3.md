@@ -34,7 +34,7 @@ We could apply any of the other filters just as easily. Try it yourself. Replace
 
 ### Parameters
 
-Each of these filter function takes different arguments. These arguments set the parameters of the filter. They determine how much to apply it, where, in what direction, or any other relevant details for the particular filter. Let's look at the parameters for each of the filters we'll be using for Kinograph.
+Each of these filter functions takes different arguments. These arguments set the parameters of the filter. They determine how much to apply it, where, in what direction, or any other relevant details for the particular filter. Let's look at the parameters for each of the filters we'll be using in Kinograph.
 
 #### threshold(grayLevel)
 
@@ -72,11 +72,21 @@ and edges in both directions equally:
 
 #### setROI(x, y, width, height)
 
+A Region of Interest is a rectangular area of the image we select to exclusively receive OpenCV operations. Hence, the arguments to <code>setROI()</code> mirror those to <code>rect()</code>, the Processing function for drawing rectangles: x, y, width, height.
+
     opencv.setROI(400,250,150,150);
     opencv.threshold(50);
 
+_Note: there's also a corresponding <code>opencv.releaseROI()</code> function that ends the use of the Region of Interest. After calling it, further OpenCV functions will affect the entire image._
+
 #### No parameters: dilation(), erosion(), and equalizeHistogram()
 
+The remaining filter functions we'll be using, <code>dilation()</code>, <code>erosion()</code>, and <code>equalizeHistgoram()</code>, take no parameters at all. They just do what they do. 
+
 ### Quiz: Filter for Frame Features
+
+As we saw in the last section, the purpose of all of these filters is to bring out the parts of an image from which we can derive useful data. In the case of Kinograph, those parts are sprocket holes, the frame borders, and the frame edges.
+
+In this quiz, your job is to apply what you just learned about these filter functions and their parameters to a Kinograph scan. You can use them individually or in combination. After you've applied your filters, we'll evaluate the results to see how much you've revealed each image feature. Keep trying until you get all three (either with a single combination of filters or in multiple tries).
 
 _Interactive THINGY!_
