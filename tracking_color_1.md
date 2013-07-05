@@ -2,7 +2,7 @@
 
 ## Color Tracking in HSV Color Space
 
-_One of the simplest ways to track an object with OpenCV is based on its color. In this section I'll show you how to use the HSV color space, range-based image filtering, and contour finding, to track an object based on its color._
+_One of the simplest ways to track an object with OpenCV is based on its color. However, the color space we use to represent the colors in an image can have a big effect on how easy it is to implement color tracking. In this section, we'll prepare an image for color tracking by converting it to HSV color space and filtering it based on a range of Hues. After filtering, we'll be able to easily track our object's position by finding contours._
 
 <iframe src="http://player.vimeo.com/video/69767694" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 
@@ -27,6 +27,17 @@ _One of the simplest ways to track an object with OpenCV is based on its color. 
 * The contour with the largest area will be the object we want to track
 * We can draw the bounding box of that contour.
 * The center of the contour's bounding box will be the object's location.
+
+### Quiz
+
+Q: What is the default color space in Processing?
+<br />_A: RGB_
+
+Q: Are there colors that can be represented in HSV color space that are impossible to represent in RGB color space?
+<br />_A: No_
+
+Q: Using OpenCV's scale, what color is represented by the following HSV values: 215, 50, 30?
+<br />_A: None. Hue ranges from 0-180._
 
 ### Code
 
