@@ -1,0 +1,41 @@
+{
+	"results": [{
+		"img_url": "http://farm4.staticflickr.com/3680/9220555920_12b1562f65.jpg",
+		"code_url" : "http://gist.github.com/atduskgreg/5938251/b0f8a463291f5cd26ea109ad0b46c97605255e7a.js",
+		"comments" : ["Just the standard play-a-movie sketch."]
+		},
+		{
+		"img_url" : "http://farm6.staticflickr.com/5480/9220555484_d2192060fb.jpg",
+		"code_url" : "https://gist.github.com/atduskgreg/5938251/7d4aa72d856ab7a34c6c823a1161fa060feee4c3.js",
+		"comments" : ["Load each frame into OpenCV. And display the OpenCV output image."]
+		},
+		{
+		"img_url" : "http://farm3.staticflickr.com/2806/9220555200_2b69b12cff.jpg",
+		"code_url" : "https://gist.github.com/atduskgreg/5938251/568440d9a6af0b51bca20814ce19c90a48c0668b.js",
+		"comments" : ["Initialize background subtraction.", 
+					  "First argument is how much history to track.", 
+					  "Second argument is.", 
+					  "Third argument is.",
+					  "Update the background. This stores the result into the gray image to be displayed."]
+		},
+		{
+		"img_url" : "http://farm3.staticflickr.com/2879/9217782347_f923ca7273.jpg",
+		"code_url" : "https://gist.github.com/atduskgreg/5938251/a33ba4c2118acfcb1d72e08f4f6669d1adfdb835.js",
+		"comments" : ["Find contours based on the subtracted background.",
+					  "Draw the contours."]
+		},
+		{
+		"img_url" : "http://farm8.staticflickr.com/7304/9217782161_88947c057d.jpg",
+		"code_url" : "https://gist.github.com/atduskgreg/5938251/a25789706f4cb37841b44eca77197c6a34e3b72a.js",
+		"comments" : ["Dilate and erode in order to close holes in the contours"]
+		},
+		{
+		"img_url" : "http://farm6.staticflickr.com/5330/9217781749_5ed9986f62.jpg",
+		"code_url" : "https://gist.github.com/atduskgreg/5938251/efd94683c6e938b2cfdc668d52276bd772473639.js",
+		"comments" : ["Draw the contour bounding box instead of the contour itself.",
+					  "If we had a way of merging multiple contours these could be really useful."]
+		}
+
+		]
+
+}
