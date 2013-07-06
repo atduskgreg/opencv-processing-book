@@ -185,55 +185,6 @@ $(window).load(function () {
 <head>
 </head>
 <body>
-<h1 id="trackallthethings">Track All the Things</h1>
-
-<h2 id="backgroundsubtraction">Background Subtraction</h2>
-
-<p><em>When processing video, we frequently want to separate people and objects that move (the foreground) from the fixed environment (the background). Separating foreground from background is an important technique that enables many applications such as motion detection and object and person tracking. Here we present one technique for achieving that: background subtraction.</em></p>
-
-<h3 id="videosummary">Video Summary</h3>
-
-<ul>
-<li>It&#8217;s hard to figure out which part of the image is the background</li>
-<li>Naive version: save the background and then do a diff with each frame.</li>
-<li>Need a clean background frame for reference. What happens if objects are permanently removed or shifted? What about as the light changes?</li>
-<li>More sophisticated models of the background: adapt as the background changes.</li>
-<li>We&#8217;ll use a background subtraction technique built-in to OpenCV that does just that.</li>
-<li>The original paper: <a href="http://www.ee.surrey.ac.uk/CVSSP/Publications/papers/KaewTraKulPong-AVBS01.pdf">An Improved Adaptive Background Mixture Model for Real- time Tracking with Shadow Detection</a>.</li>
-<li>Lessen the effect of small repetitive motions like moving trees and bushes.</li>
-<li>Adaptive Gaussian Mixture Model - explain each pixel in the scene as the sum of a series of colors that fall off in a Gaussian distribution. Background colors are ones which stay longer and more static. Moving objects change frequently because of the changing angles of their surfaces that reflect the light.</li>
-<li>When using background subtraction, we can choose how many frames affect our calculation of the background and how much effect each new frame should have.</li>
-<li>Background subtraction produces a binary image: white where frame is changing, black elsewhere</li>
-<li>We can then shape up what we find with dilate and erode to close holes in each blob</li>
-<li>And run contour finding on them so we have it as data.</li>
-<li>A next step would be to group together these clusters of contours and to add &#8220;temporal coherence&#8221;: to know how blobs move from frame to frame.</li>
-</ul>
-
-<h3 id="quiz">Quiz</h3>
-
-<p>Q: In which of the following conditions is background subtraction superior to a simple diff: A) When you have very few frames to work with. B) When light conditions are changing. C) When you need to record the change in color within the image. D) All of the above.
-<br /><em>A: B</em></p>
-
-<p>Q: Which of these factors will not affect the performance of background subtraction: A) The amount of frames of history taken into account. B) The size of the input image. C) The number of moving objects in the scene. D) All affect it.
-<br /><em>A: C</em></p>
-
-<p>Q: True or false: background subtraction gives you the location of a particular object as it crosses the scene?
-<br /><em>A: False.</em></p>
-
-<h3 id="code">Code</h3>
-
-<h4 id="importantfunctions">Important Functions</h4>
-
-<ul>
-<li><code>opencv.startBackgroundSubtraction()</code> - Setup the background subtraction process.</li>
-<li><code>opencv.updateBackground()</code> - Update the background based on the current image.</li>
-<li><code>opencv.dilate()</code> - Thicken the shapes in the current image.</li>
-<li><code>opencv.erode()</code> - Thin the shapes in the current image. When used in combination with <code>opencv.dilate()</code> this will close holes.</li>
-<li><code>opencv.findContours()</code> - Find contours based on the current gray image.</li>
-</ul>
-
-<h4 id="browsethecode">Browse the Code</h4>
-	
 	<div id="widget">
 		<div id="widgetTitle"><h3>Title</hr></div>
 
