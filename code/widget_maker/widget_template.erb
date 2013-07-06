@@ -8,7 +8,6 @@ $(window).load(function () {
 	$("#widgetTitle h3").html(data.title);
 	var imgDiv = $("<div>");
 	imgDiv.attr("id", "widgetImage");
-	imgDiv.append("<img>");
 
 	var codeDiv = $("<div>");
 	codeDiv.attr("id", "codeZone");
@@ -49,7 +48,7 @@ $(window).load(function () {
 	};
 
 	var updateBody = function(){
-		$("#widgetImage img").attr("src", data.results[currentVersion].img_url);
+		$("#widgetImage").html(data.results[currentVersion].illustration_embed);
 		$("#widgetBody pre").html(data.results[currentVersion].code);
 			
 		$("#codeComments ul").empty();
