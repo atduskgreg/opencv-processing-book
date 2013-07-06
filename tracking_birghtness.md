@@ -23,9 +23,9 @@ _Probably the single simplest way to track an object with OpenCV is based on bri
 
 #### Important Functions
 
-* <code>opencv.max()</code>
-* <code>opencv.setBufferGray()</code>
-* <code>opencv.getBufferR()</code>
+* <code>opencv.max()</code> - Find the brightest point in the current gray image.
+* <code>opencv.setBufferGray()</code> - Set the current gray image to another channel.
+* <code>opencv.getBufferG()</code> - Get the green channel of the current image. Useful for passing to <code>opencv.setBufferGray()</code>.
 
 #### Browse the Code
 
