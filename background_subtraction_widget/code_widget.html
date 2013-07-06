@@ -1,0 +1,252 @@
+<html>
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script>
+var data = {
+	"title" : "BackgroundSubtraction.pde",
+	"results": [{
+		"img_url": "http://farm4.staticflickr.com/3680/9220555920_12b1562f65.jpg",
+		"code" : "import processing.video.*;\n\nMovie video;\n\nvoid setup() {\n  size(720, 480, P2D);\n  video = new Movie(this, \"street.mov\");\n\n  video.loop();\n  video.play();\n}\n\nvoid draw() {\n  image(video, 0, 0);  \n}\n\nvoid movieEvent(Movie m) {\n  m.read();\n}",
+		"comments" : ["Just the standard play-a-movie sketch."]
+		},
+		{
+		"img_url" : "http://farm6.staticflickr.com/5480/9220555484_d2192060fb.jpg",
+		"code" : "import processing.video.*;\nimport gab.opencvpro.*;\n\nMovie video;\nOpenCV opencv;\n\nvoid setup() {\n  size(720, 480, P2D);\n  video = new Movie(this, \"street.mov\");\n  opencv = new OpenCV(this, 720, 480);\n\n  video.loop();\n  video.play();\n}\n\nvoid draw() {\n  opencv.loadImage(video);\n  image(opencv.getOutput(), 0, 0);\n}\n\nvoid movieEvent(Movie m) {\n  m.read();\n}",
+		"comments" : ["Load each frame into OpenCV. And display the OpenCV output image."]
+		},
+		{
+		"img_url" : "http://farm3.staticflickr.com/2806/9220555200_2b69b12cff.jpg",
+		"code" : "import processing.video.*;\nimport gab.opencvpro.*;\n\nMovie video;\nOpenCV opencv;\n\nvoid setup() {\n  size(720, 480, P2D);\n  video = new Movie(this, \"street.mov\");\n  opencv = new OpenCV(this, 720, 480);\n\n  opencv.startBackgroundSubtraction(5, 3, 0.5);\n\n  video.loop();\n  video.play();\n}\n\nvoid draw() {\n  opencv.loadImage(video);\n  opencv.updateBackground();\n  image(opencv.getOutput(), 0, 0);\n}",
+		"comments" : ["Initialize background subtraction.", 
+					  "First argument is how much history to track.", 
+					  "Second argument is.", 
+					  "Third argument is.",
+					  "Update the background. This stores the result into the gray image to be displayed."]
+		},
+		{
+		"img_url" : "http://farm3.staticflickr.com/2879/9217782347_f923ca7273.jpg",
+		"code" : "import processing.video.*;\nimport gab.opencvpro.*;\n\nMovie video;\nOpenCV opencv;\n\nvoid setup() {\n  size(720, 480, P2D);\n  video = new Movie(this, \"street.mov\");\n  opencv = new OpenCV(this, 720, 480);\n\n  opencv.startBackgroundSubtraction(5, 3, 0.5);\n\n  video.loop();\n  video.play();\n}\n\nvoid draw() {  \n  opencv.loadImage(video);\n  opencv.updateBackground();\n\n  image(video, 0, 0);\n  \n  noFill();\n  stroke(255,0,0);\n  strokeWeight(2);\n  for(Contour contour : opencv.findContours()){\n    contour.draw();\n  }\n}\n\nvoid movieEvent(Movie m) {\n  m.read();\n}\n",
+		"comments" : ["Find contours based on the subtracted background.",
+					  "Draw the contours."]
+		},
+		{
+		"img_url" : "http://farm8.staticflickr.com/7304/9217782161_88947c057d.jpg",
+		"code" : "import processing.video.*;\nimport gab.opencvpro.*;\n\nMovie video;\nOpenCV opencv;\n\nvoid setup() {\n  size(720, 480, P2D);\n  video = new Movie(this, \"street.mov\");\n  opencv = new OpenCV(this, 720, 480);\n\n  opencv.startBackgroundSubtraction(5, 3, 0.5);\n\n  video.loop();\n  video.play();\n}\n\nvoid draw() {  \n  opencv.loadImage(video);\n  opencv.updateBackground();\n  \n  opencv.dilate();\n  opencv.erode();\n\n  image(video, 0, 0);\n  \n  noFill();\n  stroke(255,0,0);\n  strokeWeight(2);\n  for(Contour contour : opencv.findContours()){\n    contour.draw();\n  }  \n}\n\nvoid movieEvent(Movie m) {\n  m.read();\n}\n",
+		"comments" : ["Dilate and erode in order to close holes in the contours"]
+		},
+		{
+		"img_url" : "http://farm6.staticflickr.com/5330/9217781749_5ed9986f62.jpg",
+		"code" : "import processing.video.*;\nimport gab.opencvpro.*;\nimport java.awt.Rectangle;\n\nMovie video;\nOpenCV opencv;\n\nvoid setup() {\n  size(720, 480, P2D);\n  video = new Movie(this, \"street.mov\");\n  opencv = new OpenCV(this, 720, 480);\n\n  opencv.startBackgroundSubtraction(5, 3, 0.5);\n\n  video.loop();\n  video.play();\n}\n\nvoid draw() {  \n  opencv.loadImage(video);\n  opencv.updateBackground();\n  \n  opencv.dilate();\n  opencv.erode();\n\n  image(video, 0, 0);\n  \n  noFill();\n  stroke(255,0,0);\n  strokeWeight(2);\n  for(Contour contour : opencv.findContours()){\n    Rectangle r = contour.getBoundingBox();\n    rect(r.x, r.y, r.width, r.height);\n  }    \n}\n\nvoid movieEvent(Movie m) {\n  m.read();\n}\n",
+		"comments" : ["Draw the contour bounding box instead of the contour itself.",
+					  "If we had a way of merging multiple contours these could be really useful."]
+		}
+
+		]
+
+}
+
+$(window).load(function () {
+
+	$("#widgetTitle h3").html(data.title);
+	var imgDiv = $("<div>");
+	imgDiv.attr("id", "widgetImage");
+	imgDiv.append("<img>");
+
+	var codeDiv = $("<div>");
+	codeDiv.attr("id", "codeZone");
+
+	var scriptTag = $("<pre>");
+	codeDiv.append(scriptTag);
+
+	var commentsDiv = $("<div>");
+	commentsDiv.attr("id", "codeComments");
+	var commentsList = $("<ul>");
+	
+	commentsDiv.append(commentsList);
+
+	$("#widgetBody").prepend(commentsDiv);
+	$("#widgetBody").prepend(codeDiv);
+	$("#widgetBody").prepend(imgDiv);
+
+	var currentVersion = 0;
+	var numVersions = data.results.length;
+
+	var updateProgress = function(){
+		$("#progress").html((currentVersion+1) + "/" + numVersions);
+	};
+
+	var updateLinks = function(){
+		$("#next").show();
+		$("#previous").show();
+
+		if(currentVersion >= (numVersions - 1)){
+			$("#next").hide();
+		}
+
+		if(currentVersion === 0){
+			$("#previous").hide();
+		}
+
+		updateProgress();
+	};
+
+	var updateBody = function(){
+		$("#widgetImage img").attr("src", data.results[currentVersion].img_url);
+		$("#widgetBody pre").html(data.results[currentVersion].code);
+			
+		$("#codeComments ul").empty();
+		for(var i = 0; i < data.results[currentVersion].comments.length; i++){
+			var comment = $("<li>")
+			comment.html(data.results[currentVersion].comments[i]);
+			commentsList.append(comment);
+		}
+	}
+
+	updateProgress();
+	updateLinks();
+	updateBody();
+
+	$("#next").click(function(){
+		currentVersion = currentVersion + 1;
+		updateLinks();
+		updateBody();
+		return false;
+	});
+
+	$("#previous").click(function(){
+		currentVersion = currentVersion - 1;
+		updateLinks();
+		updateBody();
+		return false;
+	});
+});
+</script>
+<style>
+	#widget {
+		width: 1300px;
+	}
+
+	#widgetBody{
+		border: 3px solid #000;
+	}
+
+	#widgetBody div {
+		width: 400px;
+		float: left;
+		padding:15px;
+	}
+
+	#codeZone {
+		border-left: 1px solid #ccc;
+		border-right: 1px solid #ccc;
+	}
+
+	#widgetBody img {
+		/*width: 350px;*/
+		/*padding: 25px;*/
+		padding: 0;
+		margin: 0;
+		width: 100%;
+	}
+
+	.navButton {
+		float:left;
+		padding: 3px;
+		padding-right: 50px;
+		background-color: #000;
+		margin-right: 10px;
+		color: #fff;
+	}
+
+	#progress {
+		padding: 3px;
+		background-color: #fff;
+		color: #000;
+		margin-right: 10px;
+		float: left;
+	}
+
+	#widgetControls a {
+		color: #fff;
+		font-weight: bold;
+		text-decoration: none;
+	}
+
+	#widgetTitle {
+		float: right;
+		text-align: right;
+
+	}
+
+	#widgetTitle h3{
+		margin: 0;
+		padding: 0;
+	}
+</style>
+<head>
+</head>
+<body>
+<h1 id="trackallthethings">Track All the Things</h1>
+
+<h2 id="backgroundsubtraction">Background Subtraction</h2>
+
+<p><em>When processing video, we frequently want to separate people and objects that move (the foreground) from the fixed environment (the background). Separating foreground from background is an important technique that enables many applications such as motion detection and object and person tracking. Here we present one technique for achieving that: background subtraction.</em></p>
+
+<h3 id="videosummary">Video Summary</h3>
+
+<ul>
+<li>It&#8217;s hard to figure out which part of the image is the background</li>
+<li>Naive version: save the background and then do a diff with each frame.</li>
+<li>Need a clean background frame for reference. What happens if objects are permanently removed or shifted? What about as the light changes?</li>
+<li>More sophisticated models of the background: adapt as the background changes.</li>
+<li>We&#8217;ll use a background subtraction technique built-in to OpenCV that does just that.</li>
+<li>The original paper: <a href="http://www.ee.surrey.ac.uk/CVSSP/Publications/papers/KaewTraKulPong-AVBS01.pdf">An Improved Adaptive Background Mixture Model for Real- time Tracking with Shadow Detection</a>.</li>
+<li>Lessen the effect of small repetitive motions like moving trees and bushes.</li>
+<li>Adaptive Gaussian Mixture Model - explain each pixel in the scene as the sum of a series of colors that fall off in a Gaussian distribution. Background colors are ones which stay longer and more static. Moving objects change frequently because of the changing angles of their surfaces that reflect the light.</li>
+<li>When using background subtraction, we can choose how many frames affect our calculation of the background and how much effect each new frame should have.</li>
+<li>Background subtraction produces a binary image: white where frame is changing, black elsewhere</li>
+<li>We can then shape up what we find with dilate and erode to close holes in each blob</li>
+<li>And run contour finding on them so we have it as data.</li>
+<li>A next step would be to group together these clusters of contours and to add &#8220;temporal coherence&#8221;: to know how blobs move from frame to frame.</li>
+</ul>
+
+<h3 id="quiz">Quiz</h3>
+
+<p>Q: In which of the following conditions is background subtraction superior to a simple diff: A) When you have very few frames to work with. B) When light conditions are changing. C) When you need to record the change in color within the image. D) All of the above.
+<br /><em>A: B</em></p>
+
+<p>Q: Which of these factors will not affect the performance of background subtraction: A) The amount of frames of history taken into account. B) The size of the input image. C) The number of moving objects in the scene. D) All affect it.
+<br /><em>A: C</em></p>
+
+<p>Q: True or false: background subtraction gives you the location of a particular object as it crosses the scene?
+<br /><em>A: False.</em></p>
+
+<h3 id="code">Code</h3>
+
+<h4 id="importantfunctions">Important Functions</h4>
+
+<ul>
+<li><code>opencv.startBackgroundSubtraction()</code> - Setup the background subtraction process.</li>
+<li><code>opencv.updateBackground()</code> - Update the background based on the current image.</li>
+<li><code>opencv.dilate()</code> - Thicken the shapes in the current image.</li>
+<li><code>opencv.erode()</code> - Thin the shapes in the current image. When used in combination with <code>opencv.dilate()</code> this will close holes.</li>
+<li><code>opencv.findContours()</code> - Find contours based on the current gray image.</li>
+</ul>
+
+<h4 id="browsethecode">Browse the Code</h4>
+	
+	<div id="widget">
+		<div id="widgetTitle"><h3>Title</hr></div>
+
+		<div id="widgetControls">
+			<div id="progress"></div>
+			<div class="navButton" id="previous"><a href="#">Previous</a></div>
+			<div class="navButton" id="next"><a href="#">Next</a></div>
+		</div>
+
+		<br style="clear:both" />
+		<div id="widgetBody">
+			<br style="clear:both;"/>
+		</div>
+	</div>
+</body>
+</html>
