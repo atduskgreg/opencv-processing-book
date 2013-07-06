@@ -38,6 +38,5 @@ page_data = data.to_json
 template = open("widget_template.erb").read
 renderer = ERB.new(template)
 
-puts renderer.result
 
-# File.open("#{target_folder}/widget.html", "w"){|f| f << renderer.render }
+File.open("#{target_folder}/widget.html", "w"){|f| f << renderer.result }
