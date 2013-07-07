@@ -2,7 +2,7 @@
 
 ## Face Detection
 
-_Faces!_
+_Pointing cameras at people_
 
 ### Video Summary
 
@@ -17,3 +17,6 @@ _Faces!_
 * <code>opencv.detect()</code> - Detect objects in the current image based on the configured cascade. Returns an array of Rectangle objects.
 
 #### Browse the Code
+
+* Detect faces in video
+* Detect clocks with a different cascade
