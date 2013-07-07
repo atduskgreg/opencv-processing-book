@@ -14,9 +14,9 @@ void setup() {
 
 void draw() {
   opencv.loadImage(video);
-  opencv.setBufferGray(opencv.getBufferR());
+  opencv.setBufferGray(opencv.getBufferG());
   image(opencv.getOutput(), 0, 0); 
-  PVector brightestPoint = opencv.min();
+  PVector brightestPoint = opencv.max();
   
   noStroke();
   fill(255, 0, 0);

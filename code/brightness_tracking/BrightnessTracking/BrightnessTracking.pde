@@ -1,28 +1,35 @@
 import gab.opencvpro.*;
-import processing.video.*;
+// Import the OpenCV Improc class,
+// it has the cvtColor() function we need.
+import org.opencv.imgproc.Imgproc;
 
-Capture video;
 OpenCV opencv;
+PImage colorImage, grayImage;
 
 void setup() {
-  video = new Capture(this, 1280, 720);
-  opencv = new OpenCV(this, video.width, video.height);  
+  colorImage = loadImage("flashlight.jpg");
+  opencv = new OpenCV(this, colorImage);  
   size(opencv.width, opencv.height, P2D);
-  
-  video.start();
+  // Save the gray image so we can compare it to Luma
+  grayImage = opencv.getSnapshot();
+  // Use built-in OpenCV function to conver the color image from BGR to LAB color space.
+  Imgproc.cvtColor(opencv.getBufferColor(), opencv.getBufferColor(), Imgproc.COLOR_BGR2Lab);
+  // Since the channels start out in the order BGRA,
+  // Converting to LAB will put the Luma in the B channel
+  opencv.setBufferGray(opencv.getBufferB());
 }
 
 void draw() {
-  opencv.loadImage(video);
-  opencv.setBufferGray(opencv.getBufferR());
-  image(opencv.getOutput(), 0, 0); 
-  PVector brightestPoint = opencv.min();
-  
-  noStroke();
-  fill(255, 0, 0);
-  ellipse(brightestPoint.x, brightestPoint.y, 20, 20);
+  background(0);
+  pushMatrix();
+  scale(0.5);
+  image(colorImage, colorImage.width/2, 0); 
+  image(grayImage, 0, colorImage.height);
+  image(opencv.getOutput(), colorImage.width, colorImage.height);
+  popMatrix();
+
+  fill(255);
+  text("GRAY", 30, height -25);
+  text("LUMA", width/2 + 30, height - 25);
 }
 
-void captureEvent(Capture c) {
-  c.read();
-}
