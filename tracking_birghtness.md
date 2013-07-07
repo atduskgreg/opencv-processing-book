@@ -35,6 +35,15 @@ In practice, the grayscale average of RGB is usually used due to its convenience
 
 ### Quiz
 
+Q: What qualities of our input image could cause problems with brightness tracking: A) The presence of many glowing objects. B) Moving shadows cast by passersby. C) The auto-exposure on our camera triggering. D) All of the above.
+<br />_A: D, all of the above._
+
+Q: Which are easier to track with this version of color tracking: bright red or dark red objects?
+<br/>_A: Light red. Dark red objects will converge with the shadows in the scene where R, G, and B components are all near 0._
+
+Q: What are some techniques we could use to prevent the brightest point from jumping around so much when tracking an object with this method?
+<br />_A: 1) Lerp the x- and y-components of the brightest point between sequential frames. 2) Blur the image before finding the max to smooth over small differences between values. 3) Filter out large jumps in the position of the point, as they're probably due to glitches rather than the continuous motion of the tracked object._
+
 ### Code
 
 #### Important Functions
