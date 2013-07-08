@@ -53,6 +53,15 @@ In 2009, two employees of a computer store uploaded a video called [HP Computers
 
 ### Quiz
 
+Q: Which of the following conditions will not make OpenCV face detection run faster: A) A smaller input image. B) Fewer faces present in the image. C) Good lighting.
+<br/>_A: C, good lighting._
+
+Q: 
+<br/>_A:_
+
+Q:
+<br/>_A:_
+
 ### Code
 
 #### Important Functions
