@@ -4,52 +4,30 @@
 
 _Detecting faces in images is one of the most ubiquitous applications of computer vision. We see it in our digital cameras for autofocus, on our social networks to identify our friends, in public surveillance systems, and many other places. In this project, we'll learn how to detect faces using OpenCV. We'll see a little bit about how the face detection process works, how it can fail, and how we can apply it to detect other things besides just faces._
 
-### Video Script
+<iframe src="http://player.vimeo.com/video/69907695" width="1000" height="562" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 
-[Face detection running]
-
-* In this project we'll learn how to detect faces in still images and live video.
-* OpenCV includes a function for detecting faces that's very easy to use.
-* However in order to understand its limitations and the situations where it will work, you need to learn a little bit about how face detection actually works.
-
-[viola-jones paper scroll?]
-
-* OpenCV's face detector uses an algorithm called Viola-Jones
-* It works by matching patterns of light and dark squares to different areas of the image at different scales.
-* Faces have a consistent arrangement of highlights and shadows  based on how light falls on the nose, cheeks, forehead, and other facial features.
-* The Viola-Jones algorithm can be trained to recognize these patterns by being shown lots of pictures of faces. This process is very resource intensive and takes a long time to complete.
-* When complete, this training process results in a file called a "cascade", which can be loaded into OpenCV and used for realtime detection without having to go through the painstaking process of training each time.
-* The cascade that's used most often is trained on frontal faces.
-
-[itp picture]
-
-* This detection technique isn't limited to just one face.
-* Here you can see it finding 79 faces in a single image.
-* It will find every face in the image that it can. Keep in mind, though: the more faces that are present, the longer it will take to process each image.
-
-[cv dazzle makeup image]
-
-* For his CV Dazzle project, artist Adam Harvey designed makeup that camouflages the wearer from Viola-Jones face detection.
-* Harvey's designs work by introducing dark and light patches on the face in areas where they don't usually appear, frustrating the detection algorithm.
-
-[cv dazzle before video]
-
-* In order to design these patterns, Harvey created visualizations, like this one, that clearly show how the Viola-Jones algorithm works.
-* What you're seeing here represents what happens when we detect faces just slowed down to the point where we can understand it.
-* The algorithm is searching across the image, in different locations and scales.
-* At each point, it compares a series of black and white patterns with the image, looking for equivalent areas of brightness and darkness of the image.
-* When it finds enough of these, overlapping just the right way, it's matched a face.
-
-
-[Alternative cascade montage]
-
-* This technique is not just limited to whole faces.
-* Researchers have trained cascades for:
-* individual parts of the face like eyes and ears
-* The entire upper body or lower body
-* even clocks
+_Video and images from Adam Harvey's [CV Dazzle](http://cvdazzle.com) used with permission. Clock photo by [jaqian](http://www.flickr.com/photos/jaqian/7292320/) and pedestrian photo by [gandalphcunningham](http://www.flickr.com/photos/gandalfcunningham/2527870434/)._
 
 ### Video Summary
+
+* Face detection in OpenCV is easy to use.
+* It is necessary to learn about how it is implemented in order to use it effectively and understand its limitations.
+* OpenCV's face detector uses the Viola-Jones algorithm, originally introduced in the 2001 paper [Rapid Object Detection Using a Boosted
+Cascade of Simple Features](http://www.merl.com/papers/docs/TR2004-043.pdf).
+* Viola-Jones works by matching a defined series of patterns of light and dark rectangles to different areas of the image at different scales.
+* Faces have a consistent arrangement of highlights and shadows based on how light falls on the facial features.
+* Viola-Jones can be trained to recognize these patterns.
+* The training process requires a large set of input images and takes a long time and a lot of computing resources.
+* The training process produces a "cascade" file (usually stored as XML), which can be loaded into OpenCV for realtime detection.
+* The most commonly used cascade is for frontal faces.
+* Artist Adam Harvey's [CV Dazzle](http://cvdazzle.com) project consists of makeup designed to camouflage the wearer from Viola-Jones face detection.
+* CV Dazzle works by introducing dark and light patches onto the face where the Viola-Jones frontal face cascade does not expect them to be.
+* Harvey produced [visualizations](https://vimeo.com/34545827) that illustrate how the Viola-Jones detection process works.
+* For more about CV Dazzle and how the Viola-Jones algorithm works, see [this Makematics interview with Adam Harvey](http://makematics.com/research/viola-jones/).
+* Viola-Jones can detect multiple faces.
+* Find more faces will slow down the processing of each image.
+* Viola-Jones can also be used to detect other objects than faces.
+* Researchers have created cascades for noses, ears, pedestrians, clock faces, and many other objects.
 
 ### The Politics of Face Detection
 
@@ -73,8 +51,6 @@ In 2009, two employees of a computer store uploaded a video called [HP Computers
 
 >"The technology we use is built on standard algorithms that measure the difference in intensity of contrast between the eyes and the upper cheek and nose. We believe that the camera might have difficulty 'seeing' contrast in conditions where there is insufficient foreground lighting."
 
-
-
 ### Quiz
 
 ### Code
@@ -88,4 +64,5 @@ In 2009, two employees of a computer store uploaded a video called [HP Computers
 #### Browse the Code
 
 * Detect faces in video
+* Scaling trick to do it faster
 * Detect clocks with a different cascade
