@@ -1,4 +1,6 @@
 <html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 <script>
 var data = <%= page_data %>;
@@ -8,15 +10,19 @@ $(window).load(function () {
 	$("#widgetTitle h3").html(data.title);
 	var imgDiv = $("<div>");
 	imgDiv.attr("id", "widgetImage");
+	imgDiv.attr("class", "span4");
+	// imgDiv.append("<img>");
 
 	var codeDiv = $("<div>");
 	codeDiv.attr("id", "codeZone");
+	codeDiv.attr("class", "span5");
 
 	var scriptTag = $("<pre>");
 	codeDiv.append(scriptTag);
 
 	var commentsDiv = $("<div>");
 	commentsDiv.attr("id", "codeComments");
+	commentsDiv.attr("class", "span3");
 	var commentsList = $("<ul>");
 	
 	commentsDiv.append(commentsList);
@@ -78,85 +84,38 @@ $(window).load(function () {
 	});
 });
 </script>
-<style>
-	#widget {
-		width: 1300px;
-	}
 
-	#widgetBody{
-		border: 3px solid #000;
-	}
+<script>
+$(function ()  
+{ $(".pop").popover({placement: 'bottom'});  
+});  
+</script>
 
-	#widgetBody div {
-		float: left;
-	}
+<script src="js/bootstrap.min.js"></script>
 
-	#codeZone {
-		border-left: 1px solid #ccc;
-		border-right: 1px solid #ccc;
-		width: 500px;
-	}
+<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+<link href="css/bootstrap-responsive.css" rel="stylesheet">
+<link href="css/styles.css" rel="stylesheet" type="text/css" />
 
-	#codeComments{
-		width: 200px;
-	}
-
-	#widgetBody img {
-		/*width: 350px;*/
-		/*padding: 25px;*/
-		padding: 0;
-		margin: 0;
-		width: 100%;
-	}
-
-	.navButton {
-		float:left;
-		padding: 3px;
-		padding-right: 50px;
-		background-color: #000;
-		margin-right: 10px;
-		color: #fff;
-	}
-
-	#progress {
-		padding: 3px;
-		background-color: #fff;
-		color: #000;
-		margin-right: 10px;
-		float: left;
-	}
-
-	#widgetControls a {
-		color: #fff;
-		font-weight: bold;
-		text-decoration: none;
-	}
-
-	#widgetTitle {
-		float: right;
-		text-align: right;
-
-	}
-
-	#widgetTitle h3{
-		margin: 0;
-		padding: 0;
-	}
-</style>
-<head>
 </head>
 <body>
+	<div id="container" class="row-fluid">
+		<div class="span8 offset2">
+			<!--INSERT CONTENT HERE-->
+		</div>
+	</div>
+
 	<div id="widget">
-		<div id="widgetTitle"><h3>Title</hr></div>
+		<div id="widgetTitle"><h3>Title</h3></div>
 
 		<div id="widgetControls">
 			<div id="progress"></div>
-			<div class="navButton" id="previous"><a href="#">Previous</a></div>
-			<div class="navButton" id="next"><a href="#">Next</a></div>
+			<div class="navButton btn" id="previous"><a href="#">Previous</a></div>
+			<div class="navButton btn" id="next"><a href="#">Next</a></div>
 		</div>
 
 		<br style="clear:both" />
-		<div id="widgetBody">
+		<div id="widgetBody" class="row">
 			<br style="clear:both;"/>
 		</div>
 	</div>
