@@ -4,10 +4,19 @@
 
 _When processing video, we frequently want to separate people and objects that move (the foreground) from the fixed environment (the background). Separating foreground from  background is an important technique that enables many applications such as motion detection and object and person tracking. Here we learn how background subtraction can separate the foreground from the background in a way that is robust to changes in light and shifts in long-still objects._
 
+### Video Script
+
+[demo of final version?]
+* Separating an image into foreground and background components 
+
+[diff video]
+
+* A naive way to 
+
 ### Video Summary
 
 * It's hard to figure out which part of the image is the background
-* Naive version: save the background and then do a diff with each frame.
+* Naive version: save the background and then do a diff with each frame. 
 * Need a clean background frame for reference. What happens if objects are permanently removed or shifted? What about as the light changes?
 * More sophisticated models of the background: adapt as the background changes.
 * We'll use a background subtraction technique built-in to OpenCV that does just that.
