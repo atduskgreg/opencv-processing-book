@@ -12,10 +12,17 @@ In the animated GIF above, we're applying a threshold at 50 to a scanned frame o
 
 Thresholding is not limited to grayscale images. You can apply it to color images and individual color channels as well (see the code samples below).
 
-## Related Functions
+### Related Functions
 
 * [adaptiveThreshold()](https://github.com/atduskgreg/opencv-processing-book/blob/master/book/filters/adaptive_threshold.md)
 * [inRange()](https://github.com/atduskgreg/opencv-processing-book/blob/master/book/filters/in_range.md)
 
+### Parameters
+
+The <code>threshold()</code> function takes a single argument: an integer value from 0-255:
+
+    opencv.threshold(50);
+
+This value represents a value of gray (0 being black and 255 white). After <code>threshold()</code> is applied, pixels below this value will be black and those above it will be white.
 
 ### Code
