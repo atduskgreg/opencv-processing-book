@@ -8,14 +8,14 @@
 
 ## World of Filters
 
-* Threshold
-* Adaptive Threshold
-* Blur
-* Dilate and Erode
-* Histogram Equalization
-* Edge detection
-* Brightness/contrast
-* Region of Interest
+* [Threshold](https://github.com/atduskgreg/opencv-processing-book/blob/master/book/filters/threshold.md)
+* [Adaptive Threshold](https://github.com/atduskgreg/opencv-processing-book/blob/master/book/filters/adaptive_threshold.md)
+* [Blur](https://github.com/atduskgreg/opencv-processing-book/blob/master/book/filters/blur.md)
+* [Dilate and Erode](https://github.com/atduskgreg/opencv-processing-book/blob/master/book/filters/dilate_erode.md)
+* [Histogram Equalization](https://github.com/atduskgreg/opencv-processing-book/blob/master/book/filters/equalize_histogram.md)
+* [Edge detection](https://github.com/atduskgreg/opencv-processing-book/blob/master/book/filters/edge_detection.md)
+* [Brightness/contrast](https://github.com/atduskgreg/opencv-processing-book/blob/master/book/filters/brightness_contrast.md)
+* [Region of Interest](https://github.com/atduskgreg/opencv-processing-book/blob/master/book/filters/region_of_interest.md)
 
 ## Calibrate
 
@@ -25,18 +25,17 @@
 ## Track All The Things
 
 * Deciding which detector to use
-* Color Tracking in HSV Color Space
-* Brightness Tracking
+* [Color Tracking in HSV Color Space](https://github.com/atduskgreg/opencv-processing-book/blob/master/book/tracking/hsv_color.md)
+* [Brightness Tracking](https://github.com/atduskgreg/opencv-processing-book/blob/master/book/tracking/brightest_point.md)
 * Feature Tracking
-* Background Subtraction
+* [Background Subtraction](https://github.com/atduskgreg/opencv-processing-book/blob/master/book/tracking/background_subtraction.md)
 * Running average of background
 * Motion Detection
 * Temporal Coherence for Blobs
 * Windowed search
 * Skin detection 
 * Face detection
-* Find Vertical and Horizontal Lines with Sobel Edge Detection and Polygon Approximation
-* Sobel vs. Hough
+* [Contours and Lines](https://github.com/atduskgreg/opencv-processing-book/blob/master/book/tracking/contours_and_lines.md)
 
 ## The Shape of Things
 
@@ -55,7 +54,7 @@
 
 ## Projects
 
-* Kinograph
+* [Kinograph](https://github.com/atduskgreg/opencv-processing-book/blob/master/book/projects/kinograph_1.md)
 * Overhead Robot Tracking
 * Food Cart Calendar
 * Text Rain
