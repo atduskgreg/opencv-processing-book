@@ -32,4 +32,3 @@ void draw() {
   text("GRAY", 30, height -25);
   text("LUMA", width/2 + 30, height - 25);
 }
-

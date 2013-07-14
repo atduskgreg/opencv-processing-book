@@ -12,7 +12,7 @@ void setup() {
   size(640, 480, P2D);
   video = new Capture(this, 640, 480);
   opencv = new OpenCV(this, video.width/scaleFactor, video.height/scaleFactor);
-  opencv.loadCascade(OpenCV.CASCADE_FRONTALFACE);  
+  opencv.loadCascade(OpenCV.CASCADE_FRONTALFACE_ALT);  
 
   small = createImage(opencv.width, opencv.height, ARGB);
 
