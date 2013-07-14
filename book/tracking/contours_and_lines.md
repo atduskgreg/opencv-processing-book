@@ -5,6 +5,7 @@
 ### Video Script
 
 * Figure out the shapes of things
+* Enables shape analysis like AR marker detection, shape analysis, image segmentation, perspective analysis, stylization like drawing (Kyle coffee bot)
 * 
 
 ### Video Summary
