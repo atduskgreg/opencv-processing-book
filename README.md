@@ -6,4 +6,13 @@ This book is being developed in parallel with [OpenCV for Processing](http://git
 
 _Getting Started with Computer Vision_ is an in-progress community project begun in May of 2013. It is generously supported by [O'Reilly Media](http://oreill.com) and will be published for public consumption by them. It's text is available freely here under a Creative Commons license.
 
-It is currently highly incomplete but under rapid development. Suggestions, contributions, corrections, and pull requests are highly welcome.
+## Contributions Welcome
+
+_Getting Started with Computer Vision_ is currently highly incomplete but under rapid development. Suggestions, contributions, corrections, and pull requests are highly welcome. If you're looking for places to help, check out [the proposed table of contents](https://github.com/atduskgreg/opencv-processing-book/blob/master/book/toc.md) Contributions are especially welcome in the form of examples, particularly in the area of camera calibration and machine learning.
+
+## Format
+
+This book is organized to be useful both as reference and as tutorial. Each page introduces its topic in a manner that should stand alone, providing links to other relevant pages that may be required as prerequisites. The overall order of the book is designed to lead a beginner through the material in a sensible and useful way if read linearly.
+
+Given the visual nature of computer vision work, each page also takes maximum advantage of the multi-media capabilities of the web to cover its material, including video and interactive code examples as well as text explanations, documentation, and links.
+

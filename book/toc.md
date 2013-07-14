@@ -35,11 +35,11 @@
 * Windowed search
 * Skin detection 
 * Face detection
+* Find Vertical and Horizontal Lines with Sobel Edge Detection and Polygon Approximation
+* Sobel vs. Hough
 
 ## The Shape of Things
 
-* Find Vertical and Horizontal Lines with Sobel Edge Detection and Polygon Approximation
-* Sobel vs. Hough
 * Point of Maximum Curvature
 * Convexity Defects
 * Top Pixel
@@ -60,3 +60,4 @@
 * Food Cart Calendar
 * Text Rain
 * AR Marker Tracking
+* Playing card detection
