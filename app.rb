@@ -5,18 +5,18 @@ require './database.rb'
 
 set :root, File.dirname(__FILE__)
 
+get '/' do
+	@data = File.read("toc.md")
+	@toctext = BlueCloth.new(@data).to_html
+	@toc = @toctext.gsub(/https:\/\/github.com\/atduskgreg\/opencv-processing-book\/blob\/master\/book\/[a-z]*\//, "/chapters/").gsub(/\.md/,"")
+	erb :index
+end
+
 get '/chapters/:q' do
     @data = File.read("#{params[:q]}.md")
     @bodytext = BlueCloth.new(@data).to_html
     @markdown = @bodytext.gsub(/<iframe class="widgetframe"/, "</div></div><div><div><iframe class=\"widgetframe\"").gsub(/https:\/\/github.com\/atduskgreg\/opencv-processing-book\/blob\/master\/book\/[a-z]*\//, "/chapters/").gsub(/\.md/,"")
     erb :chapter
-end
-
-get '/index' do
-	@data = File.read("toc.md")
-	@toctext = BlueCloth.new(@data).to_html
-	@toc = @toctext.gsub(/https:\/\/github.com\/atduskgreg\/opencv-processing-book\/blob\/master\/book\/[a-z]*\//, "/chapters/").gsub(/\.md/,"")
-	erb :index
 end
 
 get '/widgets/:q' do
