@@ -1,0 +1,74 @@
+<html>
+<head>
+
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+<script>
+$(document).ready(function () {
+	$(".callout").click(function() {
+		$('.callout').css('background-color', 'transparent');
+		var $href = $(this).attr('href').slice(1);
+		$('#' + $href).css('background-color', '#ccc');
+		$(this).css('background-color', '#ccc');
+	});
+});
+</script>
+
+<script>
+$(document).ready(function() {
+	var highest = null;
+	var hi = 0;
+	$(".item").each(function(){
+	  var h = $(this).height();
+	  if(h > hi){
+	     hi = h;
+	     highest = $(this);  
+	  }    
+	});
+	var newheight = highest.height();
+	$(".widgetframe", parent.document.body).height(newheight + 180);
+	console.log('everythings going to be ok');
+	highest.css("background-color", "red");
+});
+</script>
+
+</head>
+<body>
+
+<h3 id="widgetTitle"><%= @title %></h3>
+
+<div id="myCarousel" class="carousel slide" data-interval="false">
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <% @files.each_with_index do |widget, i| %>
+    <li data-target="#myCarousel" data-slide-to="<%= i + 1 %>"></li>
+    <% end %>
+  </ol>
+  <!-- Carousel items -->
+  <div class="carousel-inner">
+
+    <div class="active item">
+		<div class="row-fluid">
+<%= @widgetfirst %>
+		</div>
+    </div>
+
+<% @files.each do |html| %>
+	<% @data = File.read("#{html}") %>
+	<% @text = BlueCloth.new(@data).to_html %>
+	<% @fixedtext = @text.gsub(/<!--START BLOCK-->/, "<div class=\"block span4\">").gsub(/<!--END BLOCK-->/, "</div>").gsub(/(<div class="block span4">)(\n)/, "\\1").gsub(/(\[)(.*)(\])(\()(#.*)(\))({id=)(.*)(})/, "<a href=\"\\5\" class=\"callout\" id=\"\\8\">\\2<\/a>").gsub(/(<a)( href=".*">.*<\/a>)({id=)(.*)(})/,"\\1 class=\"callout\" id=\"\\4\"\\2") %>
+    <div class="item">
+		<div class="row-fluid">
+<%= @fixedtext %>
+		</div>
+    </div>
+<% end %>
+
+  </div>
+  <!-- Carousel nav -->
+  <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+  <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+</div>
+
+</body>
+</html>

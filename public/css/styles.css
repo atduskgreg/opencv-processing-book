@@ -1,0 +1,83 @@
+	body {
+
+	}
+
+	h1 {
+		font-size: 3em;
+		text-align: center;
+		margin-bottom: 30px;
+	}
+
+	h2, h3 {
+		border-bottom: 1px solid black;
+	}
+
+	h3, h4, iframe {
+		margin-top: 30px;
+	}
+
+	p.pop.btn {
+		margin-bottom: 20px;
+	}
+
+	.toc {
+		margin-top: 30px;
+	}
+
+	.widgetframe {
+		width: 100%;
+		padding: 0px;
+		border:none;
+		overflow: auto;
+		-moz-box-sizing: border-box; 
+		-webkit-box-sizing: border-box; 
+		box-sizing: border-box;
+		/*height: 500px;*/
+	}
+
+	#widgetTitle {
+		text-align: right;
+	}
+
+	#widgetTitle h3{
+		font-weight: normal;
+		font-size: 1.5em;
+		margin: 0 15px 0 0;
+		padding: 0;
+		border-bottom: 0px solid black;
+	}
+
+	.carousel-control {
+	  top: 0;
+	  margin-top: 10px;
+	}
+
+	.carousel {
+		padding-top: 60px;
+	}
+
+	.carousel-inner {
+		border-top: 1px solid #ccc;
+		border-bottom: 1px solid #ccc;
+	}
+
+	.carousel-indicators {
+	  left: 45%;
+	}
+
+	.carousel-indicators li {
+	  background-color: #ccc;
+	}
+
+	.carousel-indicators .active {
+	  background-color: #999;
+	}
+
+	.block {
+		padding-top: 20px;
+	}
+
+	.block pre {
+		margin-left: 0;
+		text-indent: 0;
+	}

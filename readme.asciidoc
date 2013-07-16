@@ -1,0 +1,28 @@
+== GSCV Web App
+
+This is the repository for the temporary Sinatra web app version of Greg Borenstein's _Getting Started with Computer Vision_.
+
+== Deploying
+
+Before deploying, merge in any new changes from the origin repo:
+
+```bash
+$ git fetch upstream
+$ git checkout master
+$ git merge upstream/master
+
+Then on the command line, run the prep script and add/commit the changes to this repo:
+
+```bash
+$ ./prep_to_deploy
+$ git commit -am 'deploying latest version'
+$ git push origin master
+```
+
+Then push to heroku:
+
+```bash
+$ git push heroku master
+```
+
+This should be all you need to do.
