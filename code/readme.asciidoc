@@ -1,0 +1,71 @@
+== Code Widgets
+
+You can create a widget from your code to be displayed in the rendered book. Widgets consist of any number of stages of code, with each stage divided into 3 sections, generally apportioned as follows:
+
+# Image or video
+# Code
+# Description (unordered list)
+
+You are not limited to arranging your widget in this way, however if you use our widget template generator, then the code will be placed in the middle section by default (though you are free to rearrange this). The widget width is divided equally amongst the 3 sections.
+
+=== Sample Markdown
+
+Widgets require some specific markdown formatting. 
+
+* Sections must be wrapped in "START BLOCK" and "END BLOCK" HTML comments.
+* Code block lines must be preceded by a tab
+* Use the code callout syntax below to tie comments to specific lines of code.
+* Widget markdown files should use the same naming prefix, followed by a number indicating the file's position within the sequence
+
+Here is a template:
+
+[source,html]
+----
+<!--START BLOCK-->
+<a href="path_to_image" title="img title"><img src="path_to_image" /></a>
+<!--END BLOCK-->
+
+<!--START BLOCK-->
+	[Standard Markdown Syntax for code](#v1c1){id=v1l1}
+	  Indent all lines with a tab
+	  Create callouts using the syntax in the first and last lines
+	    of this smaple code block
+	  E.G.: [code](link destination){id=id for this line}
+	[Woo party time](#v1c1){id=v1l1}
+<!--END BLOCK-->
+
+<!--START BLOCK-->
+* [Code description goes here.](#v2l1){id=v2c1}
+* [Use the same callout syntax as above.](#v2l2){id=v2c2}
+* Comments do not need to be linked to code lines.
+<!--END BLOCK-->
+----
+
+=== Deploying a Widget
+
+To add a widget to a chapter file, copy the following iframe tag exactly into the end of the chapter markdown file, replacing "WIDGET_PREFIX" with the appropriate widget prefix:
+
+[source,html]
+----
+<iframe class="widgetframe" src="/widgets/WIDGET_PREFIX" id="iframe1" marginheight="0" frameborder="0" onLoad="autoResize('iframe1');" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+----
+
+Requirements:
+
+* iframe must be placed at end of markdown file
+* First attribute of the iframe *must* be `class="widgetframe"`
+
+=== Template Maker
+
+Run the widget_templatemaker.rb script from the command line to create a basic template markdown file for each step of the code. It accepts 1 argument: the path to the folder containing the code files. It is not very smart, and expects the following: 
+
+* Code files to be segregated into separate folders per chapter
+
+Run it as follows:
+
+[source,bash]
+----
+$ ruby widget_templatemaker.rb _folder_name_
+----
+
+You might need to make adjustments based on your folder/file structure. I really haven't tested it very extensively.
