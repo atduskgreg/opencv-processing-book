@@ -2,18 +2,6 @@
 
 This is the repository for the temporary Sinatra web app version of Greg Borenstein's _Getting Started with Computer Vision_.
 
-== Running locally
-
-To run the app locally, make sure you have shotgun installed. Then simply run:
-
-[source,bash]
-----
-$ bundle install
-$ shotgun
-----
-
-The app will now be running at http://localhost:9393/.
-
 == Deploying
 
 Before deploying, merge in any new changes from the origin repo:
@@ -42,3 +30,15 @@ $ git push heroku master
 ----
 
 This should be all you need to do.
+
+== Running locally
+
+To run the app locally, make sure you have shotgun installed. Then simply run:
+
+[source,bash]
+----
+$ bundle install
+$ shotgun
+----
+
+The app will now be running at http://localhost:9393/.
