@@ -46,3 +46,40 @@ The app will now be running at http://localhost:9393/.
 == Widgets
 
 See https://github.com/oreillymedia/opencv-processing-book/tree/master/code for info about creating and implementing widgets.
+
+== Quizzes
+
+You can include interactive quizzes by placing HTML markup inline in your markdown files. We use Bootstrap popups to reveal the answer. Here are two examples of how you could structure this:
+
+[source,html]
+----
+Q: What qualities of our input image could cause problems with brightness tracking: A) The presence of many glowing objects. B) Moving shadows cast by passersby. C) The auto-exposure on our camera triggering. D) All of the above.
+
+<p class="pop btn bottom" href="#" rel="popover" title="Answer"
+data-content="D, all of the above.">Reveal Answer</p>
+----
+
+Which will look like this:
+
+image::images/quiz1.png[]
+
+[source,html]
+----
+Q: What qualities of our input image could cause problems with brightness tracking:
+
+<span class="pop btn left" href="#" rel="popover" 
+data-content="Wrong!">A</span> The presence of many glowing objects.
+
+<span class="pop btn left" href="#" rel="popover" 
+data-content="Wrong!">B</span> Moving shadows cast by passersby.
+
+<span class="pop btn left" href="#" rel="popover" 
+data-content="Wrong!">C</span> The auto-exposure on our camera triggering.
+
+<span class="pop btn left" href="#" rel="popover" 
+data-content="Correct!">D</span> All of the above.
+----
+
+Which will look like this:
+
+image::images/quiz2.png[]
