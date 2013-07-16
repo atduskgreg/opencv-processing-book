@@ -12,7 +12,7 @@ $ bundle install
 $ shotgun
 ----
 
-The app will no be running at http://localhost:9393/.
+The app will now be running at http://localhost:9393/.
 
 == Deploying
 
