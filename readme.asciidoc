@@ -6,23 +6,27 @@ This is the repository for the temporary Sinatra web app version of Greg Borenst
 
 Before deploying, merge in any new changes from the origin repo:
 
-```bash
+[source,bash]
+----
 $ git fetch upstream
 $ git checkout master
 $ git merge upstream/master
+----
 
 Then on the command line, run the prep script and add/commit the changes to this repo:
 
-```bash
+[source,bash]
+----
 $ ./prep_to_deploy
 $ git commit -am 'deploying latest version'
 $ git push origin master
-```
+----
 
 Then push to heroku:
 
-```bash
+[source,bash]
+----
 $ git push heroku master
-```
+----
 
 This should be all you need to do.
