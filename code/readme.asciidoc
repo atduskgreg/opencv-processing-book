@@ -69,3 +69,5 @@ $ ruby widget_templatemaker.rb _folder_name_
 ----
 
 You might need to make adjustments based on your folder/file structure. I really haven't tested it very extensively.
+
+To view *just* a rendered widget, without the chapter text, go to /widgets/_widget_prefix_.

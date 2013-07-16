@@ -42,3 +42,7 @@ $ shotgun
 ----
 
 The app will now be running at http://localhost:9393/.
+
+== Widgets
+
+See https://github.com/oreillymedia/opencv-processing-book/tree/master/code for info about creating and implementing widgets.
