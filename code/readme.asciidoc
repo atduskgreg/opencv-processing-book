@@ -26,12 +26,12 @@ Here is a template:
 <!--END BLOCK-->
 
 <!--START BLOCK-->
-	[Standard Markdown Syntax for code](#v1c1){id=v1l1}
+	[Standard Markdown Syntax for code](#v2c1){id=v2l1}
 	  Indent all lines with a tab
 	  Create callouts using the syntax in the first and last lines
 	    of this smaple code block
 	  E.G.: [code](link destination){id=id for this line}
-	[Woo party time](#v1c1){id=v1l1}
+	[Woo party time](#v2c2){id=v2l2}
 <!--END BLOCK-->
 
 <!--START BLOCK-->
