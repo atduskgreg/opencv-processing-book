@@ -2,9 +2,9 @@
 
 You can create a widget from your code to be displayed in the rendered book. Widgets consist of any number of stages of code, with each stage divided into 3 sections, generally apportioned as follows:
 
-# Image or video
-# Code
-# Description (unordered list)
+. Image or video
+. Code
+. Description (unordered list)
 
 You are not limited to arranging your widget in this way, however if you use our widget template generator, then the code will be placed in the middle section by default (though you are free to rearrange this). The widget width is divided equally amongst the 3 sections.
 
@@ -13,9 +13,9 @@ You are not limited to arranging your widget in this way, however if you use our
 Widgets require some specific markdown formatting. 
 
 * Sections must be wrapped in "START BLOCK" and "END BLOCK" HTML comments.
-* Code block lines must be preceded by a tab
+* Code block lines must be preceded by a tab.
 * Use the code callout syntax below to tie comments to specific lines of code.
-* Widget markdown files should use the same naming prefix, followed by a number indicating the file's position within the sequence
+* Widget markdown files for a section should use the same naming prefix, followed by a number indicating the file's position within the sequence.
 
 Here is a template:
 
@@ -61,7 +61,7 @@ Run the widget_templatemaker.rb script from the command line to create a basic t
 
 * Code files to be segregated into separate folders per chapter
 
-Run it as follows:
+Run it as follows from within the /code folder:
 
 [source,bash]
 ----
