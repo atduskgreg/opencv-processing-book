@@ -75,3 +75,8 @@ would apply a horizontal blur with the kernel we showed above: five pixels wide,
 would apply a vertical blur: one pixel wide and five tall, just like we saw in the vertical kernel.
 
 Neither argument to this function can be zero, or an error will be raised. How can you construct a kernel that takes up zero rows or zero columns?
+
+### Related Functions
+
+* [dilate()](https://github.com/atduskgreg/opencv-processing-book/blob/master/book/filters/dilate_erode.md)
+* [erode()](https://github.com/atduskgreg/opencv-processing-book/blob/master/book/filters/dilate_erode.md)
