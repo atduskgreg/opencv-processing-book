@@ -2,4 +2,4 @@
 cp -r ../book/*/*.md ./
 cp ../book/toc.md ./
 cp -r ../code/*/versions/*.md ./
-mv README.md home.md
+cp ../README.md ./home.md
