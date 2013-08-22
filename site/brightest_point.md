@@ -122,5 +122,3 @@ data-content="1) Lerp the x- and y-components of the brightest point between seq
 * [We then display that x-y location with a red ellipse.](#v2l2){id=v2c2}
 
 <!--END WIDGET-->
-
-</div>
