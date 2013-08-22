@@ -2,9 +2,9 @@
 
 This is the repository for the temporary Sinatra web app version of Greg Borenstein's _Getting Started with Computer Vision_.
 
-== Deploying to Heroku
+== Deploying
 
-Before deploying, merge in any new changes from the origin repo:
+Before deploying, merge in any new changes from Greg's origin repo:
 
 [source,bash]
 ----
@@ -22,14 +22,16 @@ $ git commit -am 'deploying latest version'
 $ git push origin master
 ----
 
-Then push to heroku:
+You may now run the app locally, or deploy to heroku or some other server. 
 
-[source,bash]
-----
-$ git push heroku master
-----
+\\ Then push to heroku:
 
-This should be all you need to do.
+\\ [source,bash]
+\\ ----
+\\ $ git push heroku master
+\\ ----
+
+\\ This should be all you need to do.
 
 == Running locally
 
