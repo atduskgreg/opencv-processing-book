@@ -108,6 +108,26 @@ Widgets are split into 3 columns. Columns need to be divided manually via `<!--C
 <!--END WIDGET-->
 ----
 
+=== Code callouts
+
+I've added some custom handling for code callouts within widgets. You can tag your code and the corresponding comments so that they highlight eachother on click, like this:
+
+image::https://raw.github.com/oreillymedia/opencv-processing-book/master/site/images/callouts.png[]
+
+To do so, use the following markup:
+
+In code: `[ellipse(brightestPoint.x, brightestPoint.y, 20, 20);](#v2c2){id=v2l2}`
+
+And in the corresponding comment: `* [We then display that x-y location with a red ellipse.](#v2l2){id=v2c2}`
+
+This adds `id`s to the elements, and then links them to eachother. Thus, the above would be converted to the following:
+
+Code: `<a href="#v2c2" class="callout" id="v2l2">ellipse(brightestPoint.x, brightestPoint.y, 20, 20);</a>`
+
+Comment: `<li><a class="callout" id="v2c1" href="#v2l1">Call <code>opencv.max()</code> to find the location of the brightest point in the image.</a></li>`
+
+You can see this in action in the widget sample above.
+
 == Quizzes
 
 You can include interactive quizzes by placing HTML markup inline in your markdown files. We use Bootstrap popups to reveal the answer. Here are two examples of how you could structure this:
