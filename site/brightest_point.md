@@ -65,3 +65,62 @@ data-content="1) Lerp the x- and y-components of the brightest point between seq
 3. Switch to Capture instead of a still image
 4. Use the green channel to track a green object
 
+#### Widget
+
+<!--START WIDGET-->
+
+<a href="http://www.flickr.com/photos/unavoidablegrain/9225754686/" title="image1 by atduskgreg, on Flickr"><img src="http://farm4.staticflickr.com/3760/9225754686_8cb205c73d.jpg" width="500" height="358" alt="image1"></a>
+
+<!--COLBREAK-->
+
+	[import gab.opencvpro.*;](#v1c1){id=v1l1}
+
+	OpenCV opencv;
+
+	void setup() {
+	[opencv = new OpenCV(this, "flashlight.jpg");](#v1c2){id=v1l2} 
+	  size(opencv.width, opencv.height, P2D);
+	}
+
+	void draw() {
+	  image(opencv.getOutput(), 0, 0); 
+	}
+
+<!--COLBREAK-->
+
+* [We start with a still image as a test.](#v1l1){id=v1c1}
+* [This is OpenCV hello world: load the image in, and display it.](#v1l2){id=v1c2}
+* Note that OpenCV for Processing converts the image to grayscale by default.
+
+<!--SLIDEBREAK-->
+
+<a href="http://www.flickr.com/photos/unavoidablegrain/9225754450/" title="image2 by atduskgreg, on Flickr"><img src="http://farm6.staticflickr.com/5491/9225754450_a8780f2c74.jpg" width="500" height="358" alt="image2"></a>
+
+<!--COLBREAK-->
+
+	import gab.opencvpro.*;
+
+	OpenCV opencv;
+
+	void setup() {
+	  opencv = new OpenCV(this, "flashlight.jpg");  
+	  size(opencv.width, opencv.height, P2D);
+	}
+
+	void draw() {
+	  image(opencv.getOutput(), 0, 0); 
+	  [PVector brightestPoint = opencv.max();](#v2c1){id=v2l1}
+			  
+	  noStroke();
+	  fill(255, 0, 0);
+	  [ellipse(brightestPoint.x, brightestPoint.y, 20, 20);](#v2c2){id=v2l2}
+	}
+
+<!--COLBREAK-->
+
+* [Call <code>opencv.max()</code> to find the location of the brightest point in the image.](#v2l1){id=v2c1}
+* [We then display that x-y location with a red ellipse.](#v2l2){id=v2c2}
+
+<!--END WIDGET-->
+
+</div>

@@ -34,6 +34,17 @@ function autoResize(id){
 }
 </script>
 
+<script>
+$(document).ready(function () {
+  $(".callout").click(function() {
+    $('.callout').css('background-color', 'transparent');
+    var $href = $(this).attr('href').slice(1);
+    $('#' + $href).css('background-color', '#ccc');
+    $(this).css('background-color', '#ccc');
+  });
+});
+</script>
+
 <script src="/js/bootstrap.min.js"></script>
 
 <link href="/css/bootstrap.min.css" rel="stylesheet" media="screen">
