@@ -116,15 +116,15 @@ image::https://raw.github.com/oreillymedia/opencv-processing-book/master/site/im
 
 To do so, use the following markup:
 
-In code: `[ellipse(brightestPoint.x, brightestPoint.y, 20, 20);](#v2c2){id=v2l2}`
+In code: `[Some code](#v2c2){id=v2l2}`
 
-And in the corresponding comment: `* [We then display that x-y location with a red ellipse.](#v2l2){id=v2c2}`
+And in the corresponding comment: `* [Some comment about that code.](#v2l2){id=v2c2}`
 
-This adds `id`s to the elements, and then links them to eachother. Thus, the above would be converted to the following:
+This adds `id` attributes to the elements, and then links them to eachother. Note that the brackets wrapping the lines are required--this is standard markdown syntax for links. The above would be converted to the following:
 
-Code: `<a href="#v2c2" class="callout" id="v2l2">ellipse(brightestPoint.x, brightestPoint.y, 20, 20);</a>`
+Code: `<a href="#v2c2" class="callout" id="v2l2">Some code</a>`
 
-Comment: `<li><a class="callout" id="v2c1" href="#v2l1">Call <code>opencv.max()</code> to find the location of the brightest point in the image.</a></li>`
+Comment: `<li><a class="callout" id="v2c1" href="#v2l1">Some comment about that code.</a></li>`
 
 You can see this in action in the widget sample above.
 
