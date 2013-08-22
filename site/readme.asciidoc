@@ -61,7 +61,7 @@ data-content="D, all of the above.">Reveal Answer</p>
 
 Which will look like this:
 
-image::https://github.com/oreillymedia/opencv-processing-book/tree/master/site/images/quiz1.png[]
+image::https://raw.github.com/oreillymedia/opencv-processing-book/master/site/images/quiz1.png[]
 
 [source,html]
 ----
@@ -82,4 +82,4 @@ data-content="Correct!">D</span> All of the above.
 
 Which will look like this:
 
-image::https://github.com/oreillymedia/opencv-processing-book/tree/master/site/images/quiz2.png[]
+image::https://raw.github.com/oreillymedia/opencv-processing-book/master/site/images/quiz2.png[]
