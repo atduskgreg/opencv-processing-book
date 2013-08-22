@@ -34,6 +34,41 @@
   text-shadow: 0 1px 0 #cf6262;
 }
 
+.nav-pills li a,
+.nav-pills li a:hover,
+.nav-pills li a:focus {
+  color: #ffffff;
+  background-color: #2c7db1;
+}
+
+.nav-pills li a.active {
+  background-color: #ac2f3c;
+}
+
+img.cover {
+	width: 100%;
+}
+
+img.author {
+	float: left;
+	margin-right: 10px;
+	background-color:#fff;
+	top:0;
+	left:0;
+	width:120px;
+	height:120px;
+	border:4px solid #fff;
+	-webkit-box-shadow:0 0 2px 0 #808080;
+	box-shadow:0 0 2px 0 #808080;
+	border-radius:600px;
+	-webkit-border-radius:600px;
+	background-position:center center;
+	background-size:100% auto;
+	-webkit-background-size:100% auto;
+	-moz-background-size:100% auto;
+	background-repeat:no-repeat
+}
+
 h1 {
 	font-size: 3em;
 	text-align: center;

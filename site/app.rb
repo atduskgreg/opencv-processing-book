@@ -6,10 +6,9 @@ require './database.rb'
 set :root, File.dirname(__FILE__)
 
 get '/' do
-	@data = File.read("toc.md")
-	@toctext = BlueCloth.new(@data).to_html
-	@toc = @toctext.gsub(/https:\/\/github.com\/atduskgreg\/opencv-processing-book\/blob\/master\/book\/[a-z]*\//, "/chapters/").gsub(/\.md/,"")
-	erb :index
+	@data = File.read("home.md")
+	@landingpage = BlueCloth.new(@data).to_html
+	erb :home
 end
 
 get '/index' do
