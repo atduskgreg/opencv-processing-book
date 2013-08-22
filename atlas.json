@@ -1,0 +1,6 @@
+{
+ "files" : [
+ 	"book/filters/basic_output.md"
+	],
+	"template" : "oreillymedia/atlas_trade_theme"
+}
