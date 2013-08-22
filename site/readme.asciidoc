@@ -13,10 +13,11 @@ $ git checkout master
 $ git merge upstream/master
 ----
 
-Then on the command line, run the prep script and add/commit the changes to this repo:
+Then on the command line, cd into the `/site` directory, run the prep script, and add/commit the changes to this repo:
 
 [source,bash]
 ----
+$ cd site
 $ ./prep_to_deploy
 $ git commit -am 'deploying latest version'
 $ git push origin master
@@ -26,7 +27,7 @@ You may now run the app locally, or deploy to heroku or some other server.
 
 == Running locally
 
-To run the app locally, make sure you have shotgun installed. You'll want to merge in changes from the source repo and run the prep script. Then simply run:
+To run the app locally, make sure you have shotgun installed. You'll want to merge in changes from the source repo and run the prep script. Then (again from within the `/site` directory) simply run:
 
 [source,bash]
 ----
@@ -157,3 +158,5 @@ data-content="Correct!">D</span> All of the above.
 Which will look like this:
 
 image::https://raw.github.com/oreillymedia/opencv-processing-book/master/site/images/quiz2.png[]
+
+Note that a position class (either `bottom` or `left`) is required in order for the popup to work.

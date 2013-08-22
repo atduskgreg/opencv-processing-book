@@ -3,13 +3,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 
-<script src="/ace-builds/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
-<script>
-    var editor = ace.edit("editor");
-    editor.setTheme("ace/theme/monokai");
-    editor.getSession().setMode("ace/mode/javascript");
-</script>
-
 <script>
 $(function ()  
 { $(".bottom").popover({placement: 'bottom'});  
@@ -20,18 +13,6 @@ $(function ()
 $(function ()  
 { $(".left").popover({placement: 'left'});  
 });  
-</script>
-
-<script language="JavaScript">
-function autoResize(id){
-    var newheight;
-
-    if(document.getElementById){
-        newheight=document.getElementById(id).contentWindow.document .body.scrollHeight;
-    }
-
-    document.getElementById(id).height= (newheight) + "px";
-}
 </script>
 
 <script>
