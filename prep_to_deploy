@@ -1,4 +1,0 @@
-#!/bin/bash
-cp -r book/*/*.md ./
-cp book/toc.md ./
-cp -r code/*/versions/*.md ./

@@ -21,7 +21,8 @@ end
 
 get '/chapters/:q' do
     @data = File.read("#{params[:q]}.md")
-    @bodytext = BlueCloth.new(@data).to_html
+    # @bodytext = BlueCloth.new(@data).to_html
+    @bodytext = `htmlbook -m -s #{params[:q]}.md`
     @markdown = @bodytext.gsub(/<iframe class="widgetframe"/, "</div></div><div><div><iframe class=\"widgetframe\"").gsub(/https:\/\/github.com\/atduskgreg\/opencv-processing-book\/blob\/master\/book\/[a-z]*\//, "/chapters/").gsub(/\.md/,"")
     erb :chapter
 end

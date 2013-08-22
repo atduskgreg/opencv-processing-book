@@ -1,12 +1,44 @@
-	body {
+#container {
+	padding: 90px 10px;
+}
 
-	}
+.navbar-inner {
+  background-color: #ac2f3c;
+  background-image: none;
+}
 
-	h1 {
-		font-size: 3em;
-		text-align: center;
-		margin-bottom: 30px;
-	}
+.navbar .divider-vertical {
+  border-right: 1px solid #cf6262;
+  border-left: 1px solid #cf6262;
+}
+
+.navbar .brand img {
+	max-height: 20px;
+	margin-left: 10px;
+}
+
+.navbar .brand {
+  color: #fff;
+  text-shadow: 0 1px 0 #cf6262;
+  vertical-align: middle;
+}
+
+.navbar-text {
+  margin-bottom: 0;
+  line-height: 40px;
+  color: #fff;
+}
+
+.navbar .nav > li > a {
+  color: #fff;
+  text-shadow: 0 1px 0 #cf6262;
+}
+
+h1 {
+	font-size: 3em;
+	text-align: center;
+	margin-bottom: 30px;
+}
 
 	h2, h3 {
 		border-bottom: 1px solid black;
