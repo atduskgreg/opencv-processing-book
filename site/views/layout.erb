@@ -2,29 +2,8 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-
-<script>
-$(function ()  
-{ $(".bottom").popover({placement: 'bottom'});  
-});  
-</script>
-
-<script>
-$(function ()  
-{ $(".left").popover({placement: 'left'});  
-});  
-</script>
-
-<script>
-$(document).ready(function () {
-  $(".callout").click(function() {
-    $('.callout').css('background-color', 'transparent');
-    var $href = $(this).attr('href').slice(1);
-    $('#' + $href).css('background-color', '#ccc');
-    $(this).css('background-color', '#ccc');
-  });
-});
-</script>
+<script src="/js/widget.js"></script>
+<script src="/js/quiz.js"></script>
 
 <script src="/js/bootstrap.min.js"></script>
 
