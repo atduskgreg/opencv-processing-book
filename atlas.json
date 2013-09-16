@@ -1,7 +1,6 @@
 {
   "files": [
-    "book/filters/basic_output.md",
-    "book/tracking/brightest_point.md"
+    "book/tracking/contours_and_lines.md"
   ],
   "formats": {
     "pdf": {},
@@ -9,7 +8,7 @@
     "mobi": {},
     "html": {}
   },
-  "theme": "",
+  "theme": "oreillymedia/atlas_trade_theme",
   "title": "Track All The Things",
   "template": "oreillymedia/atlas_trade_theme"
 }
