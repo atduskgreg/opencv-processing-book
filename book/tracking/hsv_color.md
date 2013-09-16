@@ -31,17 +31,17 @@ _One of the simplest ways to track an object with OpenCV is based on its color. 
 ### Quiz
 
 Q: What is the default color space in Processing?
-<br />_A: RGB_
+{% include "answer" with "RGB" %}
 
 Q: Are there colors that can be represented in HSV color space that are impossible to represent in RGB color space?
-<br />_A: No_
+{% include "answer" with "No" %}
 
 Q: Using OpenCV's scale, what color is represented by the following HSV values: 215, 50, 30?
-<br />_A: None. Hue ranges from 0-180._
+{% include "answer" with "None. Hue ranges from 0-180." %}
 
 ### Code
 
-The code sample below will walk you step-by-step through implementing Hue-based color tracking. 
+The code sample below will walk you step-by-step through implementing Hue-based color tracking.
 
 #### Important Functions
 
