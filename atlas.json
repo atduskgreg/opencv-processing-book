@@ -1,9 +1,7 @@
 {
   "title": "Track All The Things",
   "files": [
-    "book/filters/basic_output.md",
-    "book/tracking/brightest_point.md",
-    "book/tracking/face_detection.md"
+    "book/tracking/brightest_point.md"
   ],
   "formats": {
     "pdf": {},
