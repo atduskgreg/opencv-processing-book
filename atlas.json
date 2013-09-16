@@ -1,7 +1,15 @@
 {
-  "title": "Track All The Things",
-  "files" : [
-    "book/filters/basic_output.md"
+  "files": [
+    "book/filters/basic_output.md",
+    "book/tracking/brightest_point.md"
   ],
-  "template" : "oreillymedia/atlas_trade_theme"
+  "formats": {
+    "pdf": {},
+    "epub": {},
+    "mobi": {},
+    "html": {}
+  },
+  "theme": "",
+  "title": "Track All The Things",
+  "template": "oreillymedia/atlas_trade_theme"
 }
