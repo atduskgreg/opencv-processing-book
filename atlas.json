@@ -1,5 +1,4 @@
 {
-  "title": "Track All The Things",
   "files": [
     "book/tracking/brightest_point.md",
     "book/tracking/face_detection.md",
@@ -14,5 +13,6 @@
       "toc": true
     }
   },
-  "theme": "oreillymedia/atlas_trade_theme"
+  "theme": "oreillymedia/atlas_trade_theme",
+  "title": "Track All The Things"
 }
