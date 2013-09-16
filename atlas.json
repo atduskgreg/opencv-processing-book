@@ -1,8 +1,6 @@
 {
   "files": [
-    "sample.md",
-    "book/tracking/contours_and_lines.md",
-    "book/tracking/brightest_point.md"
+    "sample.md"
   ],
   "formats": {
     "pdf": {},
@@ -11,6 +9,5 @@
     "html": {}
   },
   "theme": "oreillymedia/atlas_trade_theme",
-  "title": "Track All The Things",
-  "template": "oreillymedia/atlas_trade_theme"
+  "title": "Track All The Things"
 }
