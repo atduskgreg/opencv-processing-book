@@ -1,6 +1,17 @@
 {
- "files" : [
- 	"book/filters/basic_output.md"
-	],
-	"template" : "oreillymedia/atlas_trade_theme"
+  "files": [
+    "book/filters/basic_output.md",
+    "book/tracking/brightest_point.md",
+    "book/tracking/face_detection.md"
+  ],
+  "formats": {
+    "pdf": {},
+    "epub": {},
+    "mobi": {},
+    "html": {
+      "toc": true
+    }
+  },
+  "theme": "oreillymedia/atlas_trade_theme",
+  "template": "oreillymedia/atlas_trade_theme"
 }
