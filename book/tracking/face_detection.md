@@ -83,7 +83,7 @@ data-content="15 degrees.">Reveal the Answer</p>
 
 <!--START WIDGET-->
 
-![image 1](../../code/facetracking/versions/image1.png)
+![image 1](../../../code/facetracking/versions/image1.png)
 
 <!--COLBREAK-->
 
@@ -129,7 +129,7 @@ data-content="15 degrees.">Reveal the Answer</p>
 
 <!--SLIDEBREAK-->
 
-![image 2](../../code/facetracking/versions/image2.png)
+![image 2](../../../code/facetracking/versions/image2.png)
 
 <!--COLBREAK-->
 
@@ -175,7 +175,7 @@ data-content="15 degrees.">Reveal the Answer</p>
 
 <!--SLIDEBREAK-->
 
-![image 3](../../code/facetracking/versions/image3.png)
+![image 3](../../../code/facetracking/versions/image3.png)
 
 <!--COLBREAK-->
 
