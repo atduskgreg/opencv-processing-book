@@ -1,5 +1,6 @@
 {
   "files": [
+    "sample.md",
     "book/tracking/contours_and_lines.md",
     "book/tracking/brightest_point.md"
   ],
