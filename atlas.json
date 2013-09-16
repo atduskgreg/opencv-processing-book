@@ -1,6 +1,7 @@
 {
- "files" : [
- 	"book/filters/basic_output.md"
-	],
-	"template" : "oreillymedia/atlas_trade_theme"
+  "title": "Track All The Things",
+  "files" : [
+    "book/filters/basic_output.md"
+  ],
+  "template" : "oreillymedia/atlas_trade_theme"
 }
