@@ -5,3 +5,8 @@ body {
 	color: #323232;
 	padding: 50px;
 }
+
+#container {
+	width: 80%;
+	margin: 10px auto;
+}
