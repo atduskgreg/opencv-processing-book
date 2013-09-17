@@ -1,0 +1,30 @@
+{
+  "files": [
+    "book/tracking/brightest_point.md",
+    "book/tracking/face_detection.md",
+    "book/tracking/hsv_color.md",
+    "book/tracking/background_subtraction.md"
+  ],
+  "formats": {
+    "pdf": {},
+    "epub": {},
+    "mobi": {},
+    "html": {
+      "toc": true,
+      "javascripts": [
+        "assets/jquery.min.js",
+        "assets/bootstrap.min.js",
+        "assets/widget.js",
+        "assets/quiz.js"
+      ],
+      "stylesheets": [
+        "assets/bootstrap.min.css",
+        "assets/bootstrap-responsive.min.css",
+        "assets/application.css",
+        "assets/styles.css",
+        "assets/widget.css"
+      ]
+    }
+  },
+  "title": "Track All The Things"
+}

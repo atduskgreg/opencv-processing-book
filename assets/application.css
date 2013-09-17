@@ -1,0 +1,12 @@
+body {
+	background-color: #FFF;
+	font-family: Helvetica;
+	font-size: 14px;
+	color: #323232;
+	padding: 50px;
+}
+
+#container {
+	width: 80%;
+	margin: 10px auto;
+}

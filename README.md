@@ -15,4 +15,3 @@ _Getting Started with Computer Vision_ is currently highly incomplete but under 
 This book is organized to be useful both as reference and as tutorial. Each page introduces its topic in a manner that should stand alone, providing links to other relevant pages that may be required as prerequisites. The overall order of the book is designed to lead a beginner through the material in a sensible and useful way if read linearly.
 
 Given the visual nature of computer vision work, each page also takes maximum advantage of the multi-media capabilities of the web to cover its material, including video and interactive code examples as well as text explanations, documentation, and links.
-

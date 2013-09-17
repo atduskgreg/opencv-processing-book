@@ -35,9 +35,9 @@ Face detection brings out strong, sometimes contradictory, reactions in people. 
 
 Beyond Adam Harvey's CV Dazzle, demonstrated above, artists [Kyle McDonald](http://kylemcdonald.net) and [Aram Bartholl](http://datenform.de/) of the [F.A.T Lab collective](http://fffff.at/) created a video on "[How To Avoid Facial Recognition](http://fffff.at/how-to-avoid-facial-recognition/)"
 
-<iframe src="http://player.vimeo.com/video/41861212" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> 
+<iframe src="http://player.vimeo.com/video/41861212" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 
-Very different in style and tone from CV Dazzle, the combination of humor and punk rock attitude in this video simultaneously expresses and mocks the idea of face detection as a form of technological oppression. 
+Very different in style and tone from CV Dazzle, the combination of humor and punk rock attitude in this video simultaneously expresses and mocks the idea of face detection as a form of technological oppression.
 
 At the end of the video McDonald and Bartholl demonstrate that most face detection systems fail if the face is tilted by more than 15 degrees or so. This is a practical concern when using OpenCV's face detection functions. It can be overcome by rotating the image before processing, but that technique is computationally expensive and rarely done.
 
@@ -54,16 +54,13 @@ In 2009, two employees of a computer store uploaded a video called [HP Computers
 ### Quiz
 
 Q: Which of the following conditions will not make OpenCV face detection run faster: A) A smaller input image. B) Fewer faces present in the image. C) Good lighting.
-<p class="pop btn" href="#" rel="popover" title="Answer"
-data-content="C, good lighting.">Reveal the Answer</p>
+{% include "answer" with "C, good lighting." %}
 
 Q: Is it easier to detect objects with a cascade or to train a new cascade?
-<p class="pop btn" href="#" rel="popover" title="Answer"
-data-content="Detect. Training is difficult and computationally expensive.">Reveal the Answer</p>
+{% include "answer" with "Detect. Training is difficult and computationally expensive." %}
 
 Q: What is the minimum angle of orientation that will cause the frontal face cascade to fail to detect the face?
-<p class="pop btn" href="#" rel="popover" title="Answer"
-data-content="15 degrees.">Reveal the Answer</p>
+{% include "answer" with "15 degrees." %}
 
 ### Code
 
@@ -78,3 +75,152 @@ data-content="15 degrees.">Reveal the Answer</p>
 * Detect faces in video
 * Scaling trick to do it faster
 * Detect clocks with a different cascade
+
+#### Widget
+
+<!--START WIDGET-->
+
+![image 1](../../../code/facetracking/versions/image1.png)
+
+<!--COLBREAK-->
+
+	import gab.opencv.*;
+	import processing.video.*;
+	import java.awt.*;
+
+	Capture video;
+	OpenCV opencv;
+
+	void setup() {
+	  size(640, 480, P2D);
+	  video = new Capture(this, 640, 480);
+	  opencv = new OpenCV(this, video.width, video.height);
+	  opencv.loadCascade(OpenCV.CASCADE_FRONTALFACE);
+
+	  video.start();
+	}
+
+	void draw() {
+	  image(video, 0, 0 );
+
+	  opencv.loadImage(video);
+
+	  noFill();
+	  stroke(0, 255, 0);
+	  Rectangle[] faces = opencv.detect();
+	  println(faces.length);
+
+	  for (int i = 0; i < faces.length; i++) {
+	      rect(faces[i].x, faces[i].y, faces[i].width, faces[i].height);
+	  }
+	}
+
+	void captureEvent(Capture c) {
+	  c.read();
+	}
+
+<!--COLBREAK-->
+
+* Comments go here.
+* Another comment.
+
+<!--SLIDEBREAK-->
+
+![image 2](../../../code/facetracking/versions/image2.png)
+
+<!--COLBREAK-->
+
+	import gab.opencv.*;
+	import processing.video.*;
+	import java.awt.*;
+
+	Capture video;
+	OpenCV opencv;
+
+	void setup() {
+	  size(640, 480, P2D);
+	  video = new Capture(this, 640, 480);
+	  opencv = new OpenCV(this, video.width, video.height);
+	  opencv.loadCascade(OpenCV.CASCADE_RIGHT_EAR);
+
+	  video.start();
+	}
+
+	void draw() {
+	  image(video, 0, 0 );
+
+	  opencv.loadImage(video);
+
+	  noFill();
+	  stroke(0, 255, 0);
+	  Rectangle[] ears = opencv.detect();
+	  println(faces.length);
+
+	  for (int i = 0; i < ears.length; i++) {
+	      rect(ears[i].x, ears[i].y, ears[i].width, ears[i].height);
+	  }
+	}
+
+	void captureEvent(Capture c) {
+	  c.read();
+	}
+
+<!--COLBREAK-->
+
+* Comments go here.
+* Another comment.
+
+<!--SLIDEBREAK-->
+
+![image 3](../../../code/facetracking/versions/image3.png)
+
+<!--COLBREAK-->
+
+	import gab.opencv.*;
+	import processing.video.*;
+	import java.awt.*;
+
+	Capture video;
+	OpenCV opencv;
+
+	PImage small;
+	int scaleFactor = 4;
+
+	void setup() {
+	  size(640, 480, P2D);
+	  video = new Capture(this, 640, 480);
+	  opencv = new OpenCV(this, video.width/scaleFactor, video.height/scaleFactor);
+	  opencv.loadCascade(OpenCV.CASCADE_FRONTALFACE);
+
+	  small = createImage(opencv.width, opencv.height, ARGB);
+
+	  video.start();
+	}
+
+	void draw() {
+	  image(video, 0, 0 );
+
+	  small.copy(video, 0, 0, video.width, video.height, 0, 0, small.width, small.height);
+	  opencv.loadImage(small);
+
+	  noFill();
+	  scale(scaleFactor);
+	  stroke(0, 255, 0);
+	  Rectangle[] faces = opencv.detect();
+	  println(faces.length);
+
+	  for (int i = 0; i < faces.length; i++) {
+	      rect(faces[i].x, faces[i].y, faces[i].width, faces[i].height);
+	  }
+	}
+
+	void captureEvent(Capture c) {
+	  c.read();
+	}
+
+<!--COLBREAK-->
+
+* Comments go here.
+* Another comment.
+
+<!--END WIDGET-->
