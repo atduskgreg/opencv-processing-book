@@ -49,7 +49,7 @@ Q: What are some techniques we could use to prevent the brightest point from jum
 
 ### Code
 
-{{ 'code/brightness_tracking/BrightnessTracking/BrightnessTracking.pde' 'java' | load_source }}
+{{ 'code/brightness_tracking/BrightnessTracking/BrightnessTracking.pde', 'java' | load_source }}
 
 #### Important Functions
 
