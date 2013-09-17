@@ -12,6 +12,7 @@
     "html": {
       "toc": true,
       "javascripts": [
+        "assets/jquery.min.js",
         "assets/bootstrap.min.js",
         "assets/quiz.js",
         "assets/widget.js"
