@@ -49,6 +49,8 @@ Q: What are some techniques we could use to prevent the brightest point from jum
 
 ### Code
 
+{{ 'code/brightness_tracking/BrightnessTracking/BrightnessTracking.pde' | load_source }}
+
 #### Important Functions
 
 * <code>opencv.max()</code> - Find the brightest point in the current gray image.
