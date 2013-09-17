@@ -14,8 +14,8 @@
       "javascripts": [
         "assets/jquery.min.js",
         "assets/bootstrap.min.js",
-        "assets/quiz.js",
-        "assets/widget.js"
+        "assets/widget.js",
+        "assets/quiz.js"
       ],
       "stylesheets": [
         "assets/bootstrap.min.css",
