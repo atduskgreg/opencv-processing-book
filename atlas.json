@@ -13,7 +13,6 @@
       "toc": true,
       "javascripts": [
         "assets/bootstrap.min.js",
-        "assets/bootstrap-responsive.min.js",
         "assets/quiz.js",
         "assets/widget.js"
       ],
