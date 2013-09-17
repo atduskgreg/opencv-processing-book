@@ -1,7 +1,7 @@
 $(function ()  
-{ $(".bottom").popover({placement: 'bottom'});  
-});  
+{ 
+  $(".bottom").popover();
+  $(".bottom").popover({placement: 'bottom'});  
 
-$(function ()  
-{ $(".left").popover({placement: 'left'});  
+  $(".left").popover({placement: 'left'});  
 });  
