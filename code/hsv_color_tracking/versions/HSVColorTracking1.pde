@@ -36,7 +36,7 @@ void draw() {
   image(opencv.getOutput(), 3*width/4, 3*height/4, width/4, height/4);
   // <7> Find contours in our range image.
   //     Passing 'true' sorts them by descending area.
-  contours = opencv.findContours(true);
+  contours = opencv.findContours(true, true);
   // <8> Check to make sure we've found any contours
   if (contours.size() > 0) {
     // <9> Get the first contour, which will be the largest one
