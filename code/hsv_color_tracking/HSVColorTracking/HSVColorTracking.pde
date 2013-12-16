@@ -23,7 +23,7 @@ void draw() {
   image(video, 0, 0);  
 
   // <2> Load the new frame of our movie in to OpenCV
-  opencv.loadImage(video.image());
+  opencv.loadImage(video);
   // <3> Tell OpenCV to work in HSV color space.
   opencv.useColor(HSB);
   // <4> Copy the Hue channel of our image into 
