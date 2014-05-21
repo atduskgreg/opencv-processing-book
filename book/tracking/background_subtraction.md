@@ -1,4 +1,4 @@
-# Tracking: Background Subtraction
+# Background Subtraction
 
 _When processing video, we frequently want to separate people and objects that move (the foreground) from the fixed environment (the background). Separating foreground from  background is an important technique that enables many applications such as motion detection and object and person tracking. Here we learn how background subtraction can separate the foreground from the background in a way that is robust to changes in light and shifts in long-still objects._
 

@@ -1,4 +1,4 @@
-# Filters: Histogram Equalization
+# Histogram Equalization
 
 You've probably seen histograms used to represent information about images in photo editing applications like Photoshop. Histograms show the amount of pixels at each different level of brightness in a complete image or in a particular color channel.
 

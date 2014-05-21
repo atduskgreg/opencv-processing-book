@@ -1,4 +1,4 @@
-# Tracking: Finding Contours and Lines
+# Finding Contours and Lines
 
 ## Video Script
 

@@ -1,4 +1,4 @@
-# Filters: In Range
+# In Range
 
 <img src="http://gregborenstein.com/assets/opencv/in_range.gif" width="500px" />
 

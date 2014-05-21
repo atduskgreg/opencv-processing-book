@@ -1,4 +1,4 @@
-# Filters: Basic Output
+# Basic Output
 
 Let's start with the absolute basics. Here's a sketch that loads an image file, passes it into OpenCV, and then displays the output. It's structured like most of our OpenCV sketches will be. We create an OpenCV object, pass it the image, and then use it to do filtering, and show the results. See the inline comments for line-by-line details.
 

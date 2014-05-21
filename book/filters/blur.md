@@ -1,4 +1,4 @@
-# Filters: Blur
+# Blur
 
 <img src="http://gregborenstein.com/assets/opencv/blur_gray.gif" width="500px" />
 

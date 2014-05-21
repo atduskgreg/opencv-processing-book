@@ -1,4 +1,4 @@
-# Filters: Region of Interest
+# Region of Interest
 
 <img src="http://gregborenstein.com/assets/opencv/region_of_interest.gif" width="400px" />
 

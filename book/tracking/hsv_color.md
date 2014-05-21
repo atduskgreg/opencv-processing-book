@@ -1,4 +1,4 @@
-# Tracking: Color Tracking in HSV Color Space
+# Color Tracking in HSV Color Space
 
 _One of the simplest ways to track an object with OpenCV is based on its color. However, the color space we use to represent the colors in an image can have a big effect on how easy it is to implement color tracking. In this section, we'll prepare an image for color tracking by converting it to HSV color space and filtering it based on a range of Hues. After filtering, we'll be able to easily track our object's position by finding contours._
 

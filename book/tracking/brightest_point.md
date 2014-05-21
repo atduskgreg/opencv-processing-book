@@ -1,4 +1,4 @@
-# Tracking: Track the Brightest Point
+# Track the Brightest Point
 
 _Probably the single simplest way to track an object with OpenCV is based on brightness. Brightness tracking is highly sensitive to lighting conditions and other changes in the scene, but it can work effectively in situations where you have a lot of control over the environment. In this section, we'll use OpenCV's <code>max()</code> function to track the brightest point in an image. We'll also see how a variation of brightness tracking, applied to the individual color channels of an image, can be used for a crude form of color tracking._
 

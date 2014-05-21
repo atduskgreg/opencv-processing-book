@@ -1,4 +1,4 @@
-# Filters: Adaptive Threshold
+# Adaptive Threshold
 
 ## Related Functions
 

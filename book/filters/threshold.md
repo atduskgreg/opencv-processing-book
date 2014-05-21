@@ -1,4 +1,4 @@
-# Filters: Threshold
+# Threshold
 
 <img src="http://gregborenstein.com/assets/opencv/threshold.gif" width="400px" />
 
