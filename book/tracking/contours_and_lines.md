@@ -1,20 +1,18 @@
-# Track All the Things
+# Tracking: Finding Contours and Lines
 
-## Finding Contours and Lines
-
-### Video Script
+## Video Script
 
 * Figure out the shapes of things
 * Enables shape analysis like AR marker detection, shape analysis, image segmentation, perspective analysis, stylization like drawing (Kyle coffee bot)
 * 
 
-### Video Summary
+## Video Summary
 
-### Quiz
+## Quiz
 
-### Code
+## Code
 
-#### Important Functions
+### Important Functions
 
 * <code>opencv.findContours()</code>
 * <code>contour.getPolygonApproximation()</code>
@@ -24,4 +22,4 @@
 * <code>line.start</code>
 * <code>line.end</code>
 
-#### Browse the Code
+### Browse the Code

@@ -1,4 +1,4 @@
-# Dilate and Erode
+# Filters: Dilate and Erode
 
 <img src="http://gregborenstein.com/assets/opencv/dilate.gif" width="400px" /> <img src="http://gregborenstein.com/assets/opencv/erode.gif" width="400px" />
 

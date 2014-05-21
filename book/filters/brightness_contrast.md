@@ -1,1 +1,1 @@
-# Brightness and Contrast
+# Filters: Brightness and Contrast

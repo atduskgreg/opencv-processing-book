@@ -1,6 +1,4 @@
-# Track All the Things
-
-## Face Detection
+# Tracking: Face Detection
 
 _Detecting faces in images is one of the most ubiquitous applications of computer vision. We see it in our digital cameras for autofocus, on our social networks to identify our friends, in public surveillance systems, and many other places. In this project, we'll learn how to detect faces using OpenCV. We'll see a little bit about how the face detection process works, how it can fail, and how we can apply it to detect other things besides just faces._
 
@@ -8,7 +6,7 @@ _Detecting faces in images is one of the most ubiquitous applications of compute
 
 _Video and images from Adam Harvey's [CV Dazzle](http://cvdazzle.com) used with permission. Clock photo by [jaqian](http://www.flickr.com/photos/jaqian/7292320/) and pedestrian photo by [gandalphcunningham](http://www.flickr.com/photos/gandalfcunningham/2527870434/)._
 
-### Video Summary
+## Video Summary
 
 * Face detection in OpenCV is easy to use.
 * It is necessary to learn about how it is implemented in order to use it effectively and understand its limitations.
@@ -29,7 +27,7 @@ Cascade of Simple Features](http://www.merl.com/papers/docs/TR2004-043.pdf).
 * Viola-Jones can also be used to detect other objects than faces.
 * Researchers have created cascades for noses, ears, pedestrians, clock faces, and many other objects.
 
-### The Politics of Face Detection
+## The Politics of Face Detection
 
 Face detection brings out strong, sometimes contradictory, reactions in people. It triggers our fear of being observed, of surveillance by governments, corporations, and others figures of authority. In response to these fears, there's something of a tradition of creative projects that produce inventive ways of avoiding face detection.
 
@@ -51,7 +49,7 @@ In 2009, two employees of a computer store uploaded a video called [HP Computers
 
 >"The technology we use is built on standard algorithms that measure the difference in intensity of contrast between the eyes and the upper cheek and nose. We believe that the camera might have difficulty 'seeing' contrast in conditions where there is insufficient foreground lighting."
 
-### Quiz
+## Quiz
 
 Q: Which of the following conditions will not make OpenCV face detection run faster: A) A smaller input image. B) Fewer faces present in the image. C) Good lighting.
 <p class="pop btn" href="#" rel="popover" title="Answer"
@@ -65,15 +63,15 @@ Q: What is the minimum angle of orientation that will cause the frontal face cas
 <p class="pop btn" href="#" rel="popover" title="Answer"
 data-content="15 degrees.">Reveal the Answer</p>
 
-### Code
+## Code
 
-#### Important Functions
+### Important Functions
 
 * <code>opencv.loadCascade()</code> - Setup for face tracking (or other cascade-based tracking).
 * <code>OpenCV.CASCADE_FRONTALFACE_ALT</code> - A constant referring to the standard cascade for detecting faces. Pass this to <code>opencv.loadCascade()</code> to setup for face detection.
 * <code>opencv.detect()</code> - Detect objects in the current image based on the configured cascade. Returns an array of Rectangle objects.
 
-#### Browse the Code
+### Browse the Code
 
 * Detect faces in video
 * Scaling trick to do it faster

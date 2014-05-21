@@ -1,4 +1,4 @@
-# Edge Detection
+# Filters: Edge Detection
 
 OpenCV includes a number of filters meant to reveal the edges of objects including the Canny filter, the Scharr filter, and the Sobel filter. Each of these has different properties and is useful in different situations.
 

@@ -1,12 +1,10 @@
-# Track All the Things
-
-## Color Tracking in HSV Color Space
+# Tracking: Color Tracking in HSV Color Space
 
 _One of the simplest ways to track an object with OpenCV is based on its color. However, the color space we use to represent the colors in an image can have a big effect on how easy it is to implement color tracking. In this section, we'll prepare an image for color tracking by converting it to HSV color space and filtering it based on a range of Hues. After filtering, we'll be able to easily track our object's position by finding contours._
 
 <iframe src="http://player.vimeo.com/video/69767694" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 
-### Video Summary
+## Video Summary
 
 * Color tracking is useful when you can control the color of the tracked-object or it already sticks out from the background.
 * A "color space" describes how we represent a single color as a mix of different elements.
@@ -28,7 +26,7 @@ _One of the simplest ways to track an object with OpenCV is based on its color. 
 * We can draw the bounding box of that contour.
 * The center of the contour's bounding box will be the object's location.
 
-### Quiz
+## Quiz
 
 Q: What is the default color space in Processing?
 <br />_A: RGB_
@@ -39,11 +37,11 @@ Q: Are there colors that can be represented in HSV color space that are impossib
 Q: Using OpenCV's scale, what color is represented by the following HSV values: 215, 50, 30?
 <br />_A: None. Hue ranges from 0-180._
 
-### Code
+## Code
 
 The code sample below will walk you step-by-step through implementing Hue-based color tracking. 
 
-#### Important Functions
+### Important Functions
 
 * <code>opencv.useColor()</code> - Tell OpenCV which color space to use.
 * <code>opencv.getBufferH()</code> - Access the Hue channel of the image.
@@ -52,7 +50,7 @@ The code sample below will walk you step-by-step through implementing Hue-based 
 * <code>opencv.findContours()</code> - Find contours in the current image.
 * <code>contour.getBoundingBox()</code> - Get the rectangular bounding box around a particular contour.
 
-#### Browse the Code
+### Browse the Code
 
 <script src="https://gist.github.com/atduskgreg/5937005.js"></script>
 
