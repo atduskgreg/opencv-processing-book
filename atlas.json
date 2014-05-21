@@ -1,0 +1,37 @@
+{
+  "branch": "master",
+  "files": [
+    "book/filters/adaptive_threshold.md",
+    "book/filters/basic_output.md",
+    "book/filters/blur.md",
+    "book/filters/brightness_contrast.md",
+    "book/filters/dilate_erode.md",
+    "book/filters/edge_detection.md",
+    "book/filters/equalize_histogram.md",
+    "book/filters/in_range.md",
+    "book/filters/region_of_interest.md",
+    "book/filters/threshold.md"
+  ],
+  "formats": {
+    "pdf": {
+      "version": false,
+      "index": false,
+      "toc": false
+    },
+    "epub": {
+      "index": false,
+      "toc": false,
+      "epubcheck": false
+    },
+    "mobi": {
+      "index": false,
+      "toc": false
+    },
+    "html": {
+      "index": false,
+      "toc": true
+    }
+  },
+  "theme": "",
+  "title": "opencv processing book"
+}
