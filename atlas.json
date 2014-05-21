@@ -10,7 +10,12 @@
     "book/filters/in_range.md",
     "book/filters/region_of_interest.md",
     "book/filters/threshold.md",
-    "book/filters/adaptive_threshold.md"
+    "book/filters/adaptive_threshold.md",
+    "book/tracking/background_subtraction.md",
+    "book/tracking/brightest_point.md",
+    "book/tracking/contours_and_lines.md",
+    "book/tracking/face_detection.md",
+    "book/tracking/hsv_color.md"
   ],
   "formats": {
     "pdf": {
