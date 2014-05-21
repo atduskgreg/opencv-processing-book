@@ -1,6 +1,7 @@
 {
   "branch": "master",
   "files": [
+    "book/filters/world-of-filters-part.html",
     "book/filters/basic_output.md",
     "book/filters/blur.md",
     "book/filters/brightness_contrast.md",
