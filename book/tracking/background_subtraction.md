@@ -29,13 +29,16 @@ _When processing video, we frequently want to separate people and objects that m
 
 ## Quiz
 Q: In which of the following conditions is background subtraction superior to a simple diff: A) When you have very few frames to work with. B) When light conditions are changing. C) When you need to record the change in color within the image. D) All of the above.
-<br />_A: B_
+
+Answer: B
 
 Q: Which of these factors will not affect the performance of background subtraction: A) The amount of frames of history taken into account. B) The size of the input image. C) The number of moving objects in the scene. D) All affect it.
-<br />_A: C_
+
+Answer: C
 
 Q: True or false: background subtraction gives you the location of a particular object as it crosses the scene?
-<br />_A: False._
+
+Answer: False 
 
 ## Code
 
