@@ -1,6 +1,7 @@
 {
   "branch": "master",
   "files": [
+    "book/filters/filters-part.html",
     "book/filters/basic_output.md",
     "book/filters/blur.md",
     "book/filters/dilate_erode.md",
@@ -10,11 +11,10 @@
     "book/filters/region_of_interest.md",
     "book/filters/threshold.md",
     "book/tracking/brightest_point.md",
+    "book/tracking/tracking-part.html",
     "book/tracking/face_detection.md",
-    "book/filters/filters-part.html",
     "book/projects/projects-part.html",
-    "book/projects/kinograph_1.md",
-    "book/tracking/tracking-part.html"
+    "book/projects/kinograph_1.md"
   ],
   "formats": {
     "pdf": {
