@@ -10,7 +10,11 @@
     "book/filters/region_of_interest.md",
     "book/filters/threshold.md",
     "book/tracking/brightest_point.md",
-    "book/tracking/face_detection.md"
+    "book/tracking/face_detection.md",
+    "book/filters/filters-part.html",
+    "book/projects/projects-part.html",
+    "book/projects/kinograph_1.md",
+    "book/tracking/tracking-part.html"
   ],
   "formats": {
     "pdf": {
