@@ -1,0 +1,212 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <title>OpenCV Processing Book</title>
+
+    <!-- Bootstrap core CSS -->
+   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"/>
+   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css"/>
+   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet"/>
+
+   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"> </script>
+   <script type="text/javascript" src="theme/html/javascripts/disqus.js"> </script>
+
+   <link rel="stylesheet" href="theme/html/stylesheets/atlas.css"/>
+
+
+  </head>
+
+  <body data-type="book">
+
+    <div class="navbar navbar-fixed-top" role="navigation">	
+      <div class="container">
+        <div class="navbar-header">	
+	  <img class="logo" src="theme/html/assets/logo-white.svg"/>
+          <a class="title" href="#">Getting Started with Computer Vision with OpenCV and Processing</a>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container">
+
+      <div class="row" style="padding:50px">
+        <div class="col-md-6">
+           <p style="font-size: 1.5em; line-height: 1.5em">This project is a practical introduction to computer vision using OpenCV and Processing.</p>
+           <p>
+	      <a href="ch01.html" class="btn btn-block btn-lg btn-success">Read the early draft <span class="glyphicon glyphicon-chevron-right"></span></a>
+        </div>
+	<div class="col-md-1">&nbsp;</div>
+        <div class="col-md-5" style="background-color: #eee; border-radius: 10px; padding: 10px">
+	   <h2>Sign up for updates</h2>
+	   This project is under active development.  If you'd like to be notified about updates, please subscribe to the mailing list.
+	   
+	<!-- Begin MailChimp Signup Form -->
+	<link href="//cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
+	<style type="text/css">
+		#mc_embed_signup{background:#eee; clear:left; font:14px Helvetica,Arial,sans-serif; }
+		/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+		   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+	</style>
+	<div id="mc_embed_signup">
+	<form action="http://herokuapp.us7.list-manage2.com/subscribe/post?u=5fec48c7e90ffefc48144196d&amp;id=08b889c6ec" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+		<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+	    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+	    <div style="position: absolute; left: -5000px;"><input type="text" name="b_5fec48c7e90ffefc48144196d_08b889c6ec" tabindex="-1" value=""></div>
+	    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+	</form>
+	</div>
+	
+        </div>
+      </div>
+
+      <div class="row" style="padding:10px">
+	<div class="col-md-2">			    
+	   <span class="drop fa fa-road fa-5x fa-border pull-right"></span>
+        </div>
+        <div class="col-md-3">
+	   <b>Introduction</b> covers:	
+	   <ul>
+	      <li>Why computer vision?</li>
+	      <li>More Pixels Law</li>
+	      <li>Capture, Filter, Calibrate, Track, Shape, Train, Combine</li>
+	      <li>Follow in the Footsteps of Giants</li>
+	      <li>What you should know about Processing</li>
+	   </ul>
+	</div>
+	<div class="col-md-1">&nbsp;</div>
+	<div class="col-md-2">			    
+	   <span class="drop fa fa-adjust fa-5x fa-border pull-right"></span>
+        </div>
+        <div class="col-md-3">
+	   <a href="ch01.html">The World of Filters</a> covers the following filters:	
+	   <ul>
+	<li><a href="https://github.com/atduskgreg/opencv-processing-book/blob/master/book/filters/threshold.md">Threshold</a></li>
+	<li><a href="https://github.com/atduskgreg/opencv-processing-book/blob/master/book/filters/adaptive_threshold.md">Adaptive Threshold</a></li>
+	<li><a href="https://github.com/atduskgreg/opencv-processing-book/blob/master/book/filters/blur.md">Blur</a></li>
+	<li><a href="https://github.com/atduskgreg/opencv-processing-book/blob/master/book/filters/dilate_erode.md">Dilate and Erode</a></li>
+	<li><a href="https://github.com/atduskgreg/opencv-processing-book/blob/master/book/filters/equalize_histogram.md">Histogram Equalization</a></li>
+	<li><a href="https://github.com/atduskgreg/opencv-processing-book/blob/master/book/filters/edge_detection.md">Edge detection</a></li>
+	<li><a href="https://github.com/atduskgreg/opencv-processing-book/blob/master/book/filters/brightness_contrast.md">Brightness/contrast</a></li>
+	<li><a href="https://github.com/atduskgreg/opencv-processing-book/blob/master/book/filters/region_of_interest.md">Region of Interest</a></li>
+	</ul>
+	</div>
+      </div>
+
+
+
+    <div class="row" style="padding:10px">
+	<div class="col-md-2">			    
+	   <span class="drop fa fa-search fa-5x fa-border pull-right"></span>
+        </div>
+        <div class="col-md-3">
+	   The <b>Calibrate</b> section covers:	
+	   <ul>
+	     <li> Barrel and perspective distortion correction</li>
+	     <li>Calibrating a camera with grids</li>
+	   </ul>
+	</div>
+	<div class="col-md-1">&nbsp;</div>
+	<div class="col-md-2">			    
+	   <span class="drop fa fa-bullseye fa-5x fa-border pull-right"></span>
+        </div>
+        <div class="col-md-3">
+	   The <b>Track all the Things</b> section covers:	
+	   <ul>
+	<li>Deciding which detector to use</li>
+	<li><a href="https://github.com/atduskgreg/opencv-processing-book/blob/master/book/tracking/hsv_color.md">Color Tracking in HSV Color Space</a></li>
+	<li><a href="https://github.com/atduskgreg/opencv-processing-book/blob/master/book/tracking/brightest_point.md">Brightness Tracking</a></li>
+	<li>Feature Tracking</li>
+	<li><a href="https://github.com/atduskgreg/opencv-processing-book/blob/master/book/tracking/background_subtraction.md">Background Subtraction</a></li>
+	<li>Running average of background</li>
+	<li>Motion Detection</li>
+	<li>Temporal Coherence for Blobs</li>
+	<li>Windowed search</li>
+	<li>Skin detection </li>
+	<li>Face detection</li>
+	<li><a href="https://github.com/atduskgreg/opencv-processing-book/blob/master/book/tracking/contours_and_lines.md">Contours and Lines</a></li>
+	</ul>
+	</div>
+	
+	
+	
+	
+	<div class="row" style="padding:10px">
+		<div class="col-md-2">			    
+		   <span class="drop fa fa-th fa-5x fa-border pull-right"></span>
+	        </div>
+	        <div class="col-md-3">
+		   The <b>Shape of Things</b> section covers:	
+		<ul>
+		<li>Point of Maximum Curvature</li>
+		<li>Convexity Defects</li>
+		<li>Top Pixel</li>
+		<li>Contour Winding Holes</li>
+		<li>Contour smoothing</li>
+		</ul>
+		</div>
+		<div class="col-md-1">&nbsp;</div>
+		<div class="col-md-2">			    
+		   <span class="drop fa fa-check fa-5x fa-border pull-right"></span>
+	        </div>
+	        <div class="col-md-3">
+		   The <b>Training Program</b> section covers:	
+		<ul>
+		<li>Histograms for SVM (color, contour)</li>
+		<li>Histogram of Oriented Gradients for SVM</li>
+		<li>K-Nearest Neighbor</li>
+		<li>Neural Networks in OpenCV</li>
+		</ul>
+		</div>
+	   
+        </div>	
+
+    	<div class="row" style="padding:10px">
+		<div class="col-md-3">&nbsp;</div>
+		<div class="col-md-2">			    
+		   <span class="drop fa fa-wrench fa-5x fa-border pull-right"></span>
+	        </div>
+	        <div class="col-md-3">
+		   The <b>Projects</b> section covers:	
+		<ul>
+		<li><a href="https://github.com/atduskgreg/opencv-processing-book/blob/master/book/projects/kinograph_1.md">Kinograph</a></li>
+		<li>Overhead Robot Tracking</li>
+		<li>Food Cart Calendar</li>
+		<li>Text Rain</li>
+		<li>AR Marker Tracking</li>
+		<li>Playing card detection</li>
+		</ul>
+		</div>
+		<div class="col-md-4">&nbsp;</div>
+      </div>
+
+
+</div>
+
+
+    </div>
+  
+    </div>
+
+    <div class="container">
+       <div class="row" style="margin-top: 100px; border-top: 1px solid #ccc">
+          <div class="col-md-12 disqus">
+	     <div id="disqus_thread"/>
+	   </div>
+       </div>
+    </div>
+ 
+    <div class="footer">
+      <footer>
+        <p>© O'Reilly Media, 2014</p>
+      </footer>
+    </div>
+
+  </body>
+
+</html>
