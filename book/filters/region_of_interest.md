@@ -1,6 +1,4 @@
-# World of Filters
-
-## Region of Interest
+# Region of Interest
 
 <img src="http://gregborenstein.com/assets/opencv/region_of_interest.gif" width="400px" />
 
@@ -8,7 +6,7 @@ When filtering images, sometimes we don't want to apply our filters to the entir
 
 OpenCV lets us select a Region of Interest (ROI) in order to do just that. After we set our ROI, subsequent filters will only apply to that area. In the GIF above you can see our threshold filter applied just to the area around the actors face.
 
-### Combined with Histogram Equalization
+## Combined with Histogram Equalization
 
 <img src="http://gregborenstein.com/assets/opencv/roi_histogram.gif" width="400px" />
 
@@ -18,7 +16,7 @@ In the GIF above, I've selected a small square on the right as an ROI. This area
 
 Using an ROI like this, makes our image filters work a little bit more like our eyes, which are constantly refocusing and re-adjusting to different objects and light conditions in front of us.
 
-### Parameters
+## Parameters
 
 A Region of Interest is a rectangular area of the image we select to exclusively receive OpenCV operations. Hence, the arguments to <code>setROI()</code> mirror those to <code>rect()</code>, the Processing function for drawing rectangles: x, y, width, height.
 

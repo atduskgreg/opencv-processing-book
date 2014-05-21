@@ -1,12 +1,10 @@
-# World of Filters
-
-## Blur
+# Blur
 
 <img src="http://gregborenstein.com/assets/opencv/blur_gray.gif" width="500px" />
 
 Blurring is a surprisingly useful operation in computer vision. It might seem like blurring an image would obscure exactly the information that you're seeking to extract. To the contrary, blurring is similar to taking an average: it combines the value of each pixel with its neighbors. This is really useful for eliminating small variations or noise that might hurt the results of other operations like edge detection, contour finding, etc.
 
-### Blur Strength and Direction - Convolutions and Kernels
+## Blur Strength and Direction - Convolutions and Kernels
 
 OpenCV's <code>blur()</code> function uses a type of blur known as a "box blur". In order to understand its effects -- and the various options available when applying a blur -- you'll need to know a little bit about how OpenCV applies blurs and other image filters.
 
@@ -58,7 +56,7 @@ It's also worth noting that, unlike some other filters, <code>blur()</code> can 
 
 <img src="http://gregborenstein.com/assets/opencv/blur_color.gif" width="500px" />
 
-### Parameters
+## Parameters
 
 OpenCV for Processing's <code>blur()</code> function has two different forms. Passing a single argument applies a simple box blur to the image with a kernel size determined by the argument you pass in.
  
@@ -76,7 +74,7 @@ would apply a vertical blur: one pixel wide and five tall, just like we saw in t
 
 Neither argument to this function can be zero, or an error will be raised. How can you construct a kernel that takes up zero rows or zero columns?
 
-### Related Functions
+## Related Functions
 
 * [dilate()](https://github.com/atduskgreg/opencv-processing-book/blob/master/book/filters/dilate_erode.md)
 * [erode()](https://github.com/atduskgreg/opencv-processing-book/blob/master/book/filters/dilate_erode.md)

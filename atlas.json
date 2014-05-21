@@ -1,7 +1,6 @@
 {
   "branch": "master",
   "files": [
-    "book/filters/adaptive_threshold.md",
     "book/filters/basic_output.md",
     "book/filters/blur.md",
     "book/filters/brightness_contrast.md",
@@ -10,7 +9,8 @@
     "book/filters/equalize_histogram.md",
     "book/filters/in_range.md",
     "book/filters/region_of_interest.md",
-    "book/filters/threshold.md"
+    "book/filters/threshold.md",
+    "book/filters/adaptive_threshold.md"
   ],
   "formats": {
     "pdf": {
@@ -33,5 +33,5 @@
     }
   },
   "theme": "",
-  "title": "opencv processing book"
+  "title": "OpenCV Processing Book"
 }
