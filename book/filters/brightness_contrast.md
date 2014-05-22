@@ -1,3 +1,1 @@
-# World of Filters
-
-## Brightness and Contrast
+# Brightness and Contrast
