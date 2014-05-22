@@ -59,6 +59,10 @@ body {
     list-style-type: none;
 }
 
+.pagination a {
+	color: white;
+}
+
 .pagination li {
   background-color: #51729c;
   border-radius: 5px;
