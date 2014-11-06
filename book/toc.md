@@ -34,7 +34,7 @@
 * Temporal Coherence for Blobs
 * Windowed search
 * Skin detection 
-* Face detection
+* [Face detection](https://github.com/atduskgreg/opencv-processing-book/blob/master/book/tracking/face_detection.md)
 * [Contours and Lines](https://github.com/atduskgreg/opencv-processing-book/blob/master/book/tracking/contours_and_lines.md)
 
 ## The Shape of Things
